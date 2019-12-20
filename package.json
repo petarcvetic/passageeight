@@ -1,0 +1,17 @@
+{
+  "name": "passage8",
+  "version": "1.0.0",
+  "description": "passage8 portfolio",
+  "author": "dj",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
