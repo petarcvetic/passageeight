@@ -1,0 +1,67 @@
+//colors
+
+$light_pink: #ff5f88;
+$dark_pink: #920c2f;
+$main_color: #b21b42;
+$white: #ffffff;
+$grey: #717171;
+$dark_grey: #3f3f3f;
+$black: #000000;
+
+//font
+$secondFam: "Open Sans";
+$font: 100px;
+
+
+
+//margins
+
+$mb-60: 60px;
+
+
+//flex
+
+.flex-center {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-start {
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+//containers
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container-full {
+  width: 100%;
+
+}
+
+//grid
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}

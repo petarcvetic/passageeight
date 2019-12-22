@@ -1,72 +1,45 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        passage8
-      </h1>
-      <h2 class="subtitle">
-        passage8 portfolio
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div>
+    <div class="services">
+      <our-services />
+    </div>
+    <div class="strategies">
+      <div class="text-wrap">
+        <div class="wrap">
+          <h2>Successfully integrated digital marketing
+            strategies<span>.</span></h2>
+          <p>We will never offer unnecessary services because we understand what it means to run a business, and we recognize the importance and uniqueness of your brand. Each project we take on gets our full attention.</p>
+          <div class="link-wrap">
+            <p>LEARN MORE</p>
+            <img src="@/assets/img/arrow-red.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <div class="wrap">
+          <img src="@/assets/img/osmica.png" alt="">
+        </div>
       </div>
     </div>
   </div>
 </template>
-
 <script>
-import Logo from '~/components/Logo.vue'
+import OurServices from '../components/OurServices.vue';
 
 export default {
   components: {
-    Logo
+    OurServices
+  },
+  head() {
+    return {
+      title: 'Welcome',
+      meta: [{
+        hid: 'description',
+        name: 'description',
+        content: 'Welcome'
+      }]
+    }
   }
 }
+
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
