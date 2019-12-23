@@ -290,7 +290,7 @@ body {
       h2 {
         font-size: $font * 0.56;
         letter-spacing: 1px;
-        line-height: $font 0.76;
+        line-height: $font * 0.76;
         color: $black;
         font-weight: 600;
 
@@ -314,7 +314,7 @@ body {
         align-items: center;
         max-width: 300px;
         cursor: pointer;
-        border-top: 1px solid  $main_color;
+        border-top: 1px solid $main_color;
 
         p {
           font-size: $font * 0.14;
@@ -352,11 +352,173 @@ body {
       max-height: 1000px;
 
       img {
-        width: 100%
+        width: 100%;
+        height: 100%;
       }
     }
 
 
   }
 
+}
+
+.scroll-section {
+  @extend .container-full;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  #animation {
+    height: 100vh;
+    background: $white;
+    position: relative;
+
+    #box {
+      position: absolute;
+      top: 50%;
+      right: 30%;
+      margin-top: -300px;
+
+      #innerBox {
+
+        width: 450%;
+
+        h2 {
+          background: linear-gradient(90deg, rgba(255, 95, 136, 1) 0%, rgba(178, 27, 66, 1) 27%, rgba(0, 0, 0, 1) 100%);
+          font-size: $font * 1.50;
+          letter-spacing: 3px;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-family: $secondFam;
+          font-weight: 800;
+          text-align: center;
+
+          span {
+            color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .video-section {
+    background: $black-bg;
+    @extend .container-full;
+
+    .video-wrap {
+      @extend .container;
+      @extend .flex-between;
+      align-items: center;
+      height: 100vh;
+      transition: 0.4s;
+
+
+      .video-player-box {
+        width: 48%;
+        max-width: 451px;
+        height: 307px;
+        transition: 0.4s;
+
+
+        .vjs_video_3-dimensions {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transition: 0.4s;
+
+          .vjs-big-play-button {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: $main_color;
+            border: none;
+            position: absolute;
+            top: -50px;
+            left: 400px;
+
+            .vjs-icon-placeholder {
+              &:before {
+                content: "\f101";
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 55px;
+              }
+            }
+          }
+        }
+      }
+
+      .player-full {
+        width: 100%;
+        max-width: unset;
+        height: 500px;
+      }
+
+      .text-wrap {
+        width: 48%;
+        @extend .flex-start;
+        align-items: center;
+        transition: 0.4s;
+
+
+        .wrap {
+          @extend .flex-start;
+          align-items: center;
+          height: 100%;
+          max-height: 600px;
+
+          h2 {
+            font-size: $font * 0.56;
+            letter-spacing: 1px;
+            line-height: $font * 0.76;
+            color: $white;
+            font-weight: 600;
+
+            span {
+              color: $main_color;
+            }
+          }
+
+          p {
+            font-size: $font * 0.22;
+            line-height: $font * 0.32;
+            color: $white;
+            font-family: $secondFam;
+            font-weight: 400;
+          }
+
+          .link-wrap {
+            @extend .flex-between;
+            width: 100%;
+            height: 100px;
+            align-items: center;
+            max-width: 300px;
+            cursor: pointer;
+            border-top: 1px solid $main_color;
+
+            p {
+              font-size: $font * 0.14;
+              letter-spacing: 2px;
+              line-height: $font * 0.16;
+              color: $main_color;
+              font-weight: 600;
+              text-align: right;
+            }
+
+            img {
+              transform: translateX(-10px);
+              transition: 0.4s;
+            }
+
+            &:hover img {
+              transform: translateX(0);
+            }
+          }
+
+        }
+      }
+
+    }
+  }
 }

@@ -21,14 +21,32 @@
         </div>
       </div>
     </div>
+    <div class="scroll-section">
+      <client-only>  
+       <video-vue />    
+     </client-only>
+
+
+    <div class="video-section">
+      
+    </div>
+
+
+    </div>
   </div>
 </template>
 <script>
 import OurServices from '../components/OurServices.vue';
+import ScrollVue from '../components/ScrollVue.vue';
+import VideoVue from '../components/VideoVue.vue';
+
 
 export default {
   components: {
-    OurServices
+    OurServices,
+    ScrollVue,
+    VideoVue
+  
   },
   head() {
     return {
@@ -37,9 +55,21 @@ export default {
         hid: 'description',
         name: 'description',
         content: 'Welcome'
-      }]
-    }
-  }
-}
+      }],
+      script: [
+        { src: "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" },
+        { src: "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" },
+        { src: "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" },
+        { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineLite.min.js" },
+        { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js" },
+        { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/CSSPlugin.min.js" },
+        { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/BezierPlugin.min.js" }
 
+      ]
+    }
+  },
+
+
+}
 </script>
+
