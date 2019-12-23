@@ -5,11 +5,18 @@
       </div>
       <div class="text-wrap">
         <div class="wrap">
-          <h2>Successfully integrated digital marketing
-            strategies<span>.</span></h2>
-          <p>We will never offer unnecessary services because we understand what it means to run a business, and we recognize the importance and uniqueness of your brand. Each project we take on gets our full attention.</p>
+          <h2>Together,
+            we will build and increase
+            your brand’s online credibility<span>.</span></h2>
+          <p>At Passage 8, we concentrate on creating well-thought-out
+            marketing strategies and rely on valuable,
+            far-reaching digital marketing tools
+            to reach those in need of the services or products
+            your business offers.<br><br>
+            With our help, you can reach a broader audience
+            in a way that is measurable and cost-effective.</p>
           <div class="link-wrap">
-            <p>LEARN MORE</p>
+            <p>GET A QUOTE</p>
             <img src="@/assets/img/arrow-red.png" alt="">
           </div>
         </div>
@@ -48,14 +55,23 @@ export default {
     // listen event
     onPlayerPlay(player) {
       let playerBox = document.getElementById('videoPlayer');
+        let playerBtn = document.querySelector('.vjs-big-play-button');
+
+      playerBtn.classList.remove('d-block');
       playerBox.classList.add('player-full');
     },
     onPlayerPause(player) {
       let playerBox = document.getElementById('videoPlayer');
+      let playerBtn = document.querySelector('.vjs-big-play-button');
+
+      playerBtn.classList.add('d-block');
       playerBox.classList.remove('player-full');
     },
     onPlayerEnded(player) {
       let playerBox = document.getElementById('videoPlayer');
+      let playerBtn = document.querySelector('.vjs-big-play-button');
+
+      playerBtn.classList.add('d-block');
       playerBox.classList.remove('player-full');
     },
     onPlayerLoadeddata(player) {

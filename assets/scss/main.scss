@@ -364,7 +364,6 @@ body {
 
 .scroll-section {
   @extend .container-full;
-  height: 100vh;
   position: relative;
   overflow: hidden;
 
@@ -404,17 +403,21 @@ body {
   .video-section {
     background: $black-bg;
     @extend .container-full;
+    @extend .flex-center;
+    align-items: center;
+
 
     .video-wrap {
       @extend .container;
       @extend .flex-between;
       align-items: center;
-      height: 100vh;
+      height: 90%;
       transition: 0.4s;
+      margin-top: 70px;
 
 
       .video-player-box {
-        width: 48%;
+        width: 33%;
         max-width: 451px;
         height: 307px;
         transition: 0.4s;
@@ -456,7 +459,7 @@ body {
       }
 
       .text-wrap {
-        width: 48%;
+        width: 60%;
         @extend .flex-start;
         align-items: center;
         transition: 0.4s;
@@ -466,7 +469,6 @@ body {
           @extend .flex-start;
           align-items: center;
           height: 100%;
-          max-height: 600px;
 
           h2 {
             font-size: $font * 0.56;
@@ -474,6 +476,7 @@ body {
             line-height: $font * 0.76;
             color: $white;
             font-weight: 600;
+
 
             span {
               color: $main_color;
@@ -494,6 +497,7 @@ body {
             height: 100px;
             align-items: center;
             max-width: 300px;
+            margin-top: 45px;
             cursor: pointer;
             border-top: 1px solid $main_color;
 
@@ -519,6 +523,75 @@ body {
         }
       }
 
+    }
+  }
+}
+
+.why-container {
+  @extend .container-full;
+  background: $black-bg;
+
+  .wrap {
+    @extend .container;
+    @extend .flex-start;
+    align-items: center;
+    height: 100%;
+    max-height: 600px;
+
+    .text-wrap {
+      h2 {
+        font-size: $font * 0.56;
+        letter-spacing: 1px;
+        line-height: $font * 0.76;
+        color: $white;
+        font-weight: 600;
+
+        span {
+          color: $main_color;
+        }
+      }
+
+      p {
+        font-size: $font *0.22;
+        line-height: $font * 0.32;
+        color: $white;
+        font-family: $secondFam;
+        font-weight: 400;
+      }
+    }
+
+    .hover-wrap {
+      width: 100%;
+      max-width: 750px;
+      margin: 35px auto;
+      @extend .flex-between;
+      align-items: center;
+
+      .single {
+        @extend .flex-between;
+        align-items: center;
+        flex-direction: column;
+        height: 60px;
+
+        span {
+          width: 30px;
+          height: 5px;
+          background-color: $white;
+          cursor: pointer;
+        }
+
+        .active {
+          columns: $main_color;
+        }
+      }
+
+      p {
+        font-size: $font *0.18;
+        line-height: $font * 0.25;
+        color: $white;
+        font-family: $secondFam;
+        font-weight: 400;
+      }
     }
   }
 }
