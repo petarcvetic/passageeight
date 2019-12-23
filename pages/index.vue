@@ -22,16 +22,10 @@
       </div>
     </div>
     <div class="scroll-section">
-      <client-only>  
-       <video-vue />    
-     </client-only>
-
-
-    <div class="video-section">
-      
-    </div>
-
-
+      <client-only>
+        <video-vue />
+      </client-only>
+      <why-vue />
     </div>
   </div>
 </template>
@@ -39,14 +33,16 @@
 import OurServices from '../components/OurServices.vue';
 import ScrollVue from '../components/ScrollVue.vue';
 import VideoVue from '../components/VideoVue.vue';
+import WhyVue from '../components/WhyVue.vue';
 
 
 export default {
   components: {
     OurServices,
     ScrollVue,
-    VideoVue
-  
+    VideoVue,
+    WhyVue
+
   },
   head() {
     return {
@@ -71,5 +67,5 @@ export default {
 
 
 }
-</script>
 
+</script>

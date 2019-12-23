@@ -8,6 +8,8 @@ $grey: #717171;
 $dark_grey: #3f3f3f;
 $black: #000000;
 $black-bg: #1C1C1C;
+
+
 //font
 $secondFam: "Open Sans";
 $font: 100px;
@@ -64,4 +66,12 @@ $mb-60: 60px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+}
+
+
+.d-none{
+   display: none !important;
+}
+.d-block{
+   display: block !important;
 }
