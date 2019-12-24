@@ -1,18 +1,25 @@
 <template>
   <div class="why-container">
     <div class="wrap">
-      <div class="text-wrap">
+      <div class="text-wrap">       
         <h2>Why choose us<span>?</span></h2>
         <p>Your brand is what makes you unique and we are here to present your authenticity to the right people.
           Passage Eight is a full-service digital marketing agency that utilizes various digital marketing tools to create compelling,
           goal-driven strategies that will help you establish your business’ online presence.
         </p>
+        <div class="text-box">
+           <p>Because</p><span> we</span>
+           <p class="normal">undestand</p>
+        </div>
+       
       </div>
       <div class="hover-wrap">
-        <div class="single" v-for="(service, index) in services">
-          <span  @mouseover="textHover(index)"></span>          
+        <div class="box">
+          <div @mouseover="textHover(index)" class="single" v-for="(service, index) in services">
+            <span :class="{'active': show.id === index}"></span>
+          </div>
         </div>
-        <p >{{show.text}}</p>
+        <p>{{show.text}}</p>
       </div>
     </div>
   </div>
@@ -49,8 +56,9 @@ export default {
   },
   methods: {
     textHover(i) {
-      this.show.id = i;    
-      this.show.text = this.services[i].text;    }
+      this.show.id = i;
+      this.show.text = this.services[i].text;
+    }
 
   }
 };
