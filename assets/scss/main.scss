@@ -48,11 +48,13 @@ body {
 
 .header {
   @extend .flex-center;
-  background-color: $main_color;
-  background-image: url('~assets/img/vektor-50.svg');
+ /* background-color: $main_color;*/
+  /*background-image: url('~assets/img/vektor-50.svg');*/
+  background-color: #000;
   background-size: cover;
   height: 100vh;
   width: 100%;
+  position: relative;
 
   .wrap {
 
@@ -679,7 +681,7 @@ body {
 .form-section {
   @extend .container-full;
   background: $white;
-  padding: 250px 30px;
+  padding: 250px 0px;
 
   .wrap {
     width: 100%;
