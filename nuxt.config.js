@@ -13,9 +13,12 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Archivo:400,700&display=swap'},
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:800&display=swap'}
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Archivo:400,500,600,700&display=swap'},
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap'}
 
+    ],
+       script: [
+      { hid: 'stripe', src: 'https://kit.fontawesome.com/bb825573ac.js', defer: true }
     ]
   },
   /*
@@ -29,11 +32,13 @@ export default {
 
       '@/assets/scss/main.scss'
   ],
+ 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
    { src: '~plugins/nuxt-video-player-plugin.js', ssr: false }
+   
   ],
   /*
   ** Nuxt.js dev-modules
@@ -44,15 +49,14 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    
   ],
   /*
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
+      extend (config) {
+      
     }
   }
 }
