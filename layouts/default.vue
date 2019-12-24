@@ -1,17 +1,20 @@
 <template>
   <div class="main">
-   
-      <ps-header />
-  
+
+    <ps-header />
     <nuxt />
+    <ps-footer />
+
   </div>
 </template>
 <script>
 import PsHeader from '../components/PsHeader.vue';
+import PsFooter from '../components/PsFooter.vue';
 
 export default {
   components: {
-    PsHeader
+    PsHeader,
+    PsFooter
   }
 }
 

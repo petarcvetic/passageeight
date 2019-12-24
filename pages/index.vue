@@ -27,6 +27,8 @@
       </client-only>
       <why-vue />
     </div>
+    <shadow-vue />
+    <contact-form />
   </div>
 </template>
 <script>
@@ -34,6 +36,8 @@ import OurServices from '../components/OurServices.vue';
 import ScrollVue from '../components/ScrollVue.vue';
 import VideoVue from '../components/VideoVue.vue';
 import WhyVue from '../components/WhyVue.vue';
+import ShadowVue from '../components/Shadow.vue';
+import ContactForm from '../components/ContactForm.vue';
 
 
 export default {
@@ -41,7 +45,9 @@ export default {
     OurServices,
     ScrollVue,
     VideoVue,
-    WhyVue
+    WhyVue,
+    ShadowVue,
+    ContactForm
 
   },
   head() {
