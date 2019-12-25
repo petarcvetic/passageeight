@@ -2,7 +2,7 @@
   <div class="container-full">
     <div class="grid">
       <div class="link-wrap">
-        <div v-for="(service, index) in services" :class="{'active': show.id === index}" @mouseover="textHover(index)">{{service.title}}</div>
+        <div v-for="(service, index) in services"  :class="{'active': show.id === index}" @mouseover="textHover(index)">{{service.title}}</div>
       </div>
       <img :src="require(`@/assets/img/${show.img}`)" alt="">
       <div class="text-area">

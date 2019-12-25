@@ -279,7 +279,7 @@ body {
   @extend .container;
   @extend .grid;
   height: 100vh;
-  padding: 30px 50px;
+
 
   .text-wrap {
     grid-column: 1 / span 6;
@@ -459,7 +459,8 @@ body {
 
       .player-full {
         width: 100%;
-        max-width: unset;
+        max-width: 1200px;
+        margin: 0 auto;
         height: 500px;
       }
 
@@ -474,6 +475,7 @@ body {
           @extend .flex-start;
           align-items: center;
           height: 100%;
+
 
           h2 {
             font-size: $font * 0.56;
@@ -535,7 +537,7 @@ body {
 .why-container {
   @extend .container-full;
   background: $black-bg;
-  padding: 250px 30px;
+  padding: 250px 0px;
 
   .wrap {
     @extend .container;
@@ -545,6 +547,8 @@ body {
     max-height: 600px;
 
     .text-wrap {
+      position: relative;
+
       h2 {
         font-size: $font * 0.56;
         letter-spacing: 1px;
@@ -568,8 +572,10 @@ body {
       .text-box {
         @extend .flex-end;
         position: absolute;
-        top: -103px;
+        top: -110px;
         right: 0;
+        width: 830px;
+        align-items: end;
 
         p {
           font-size: $font * 1.66;
@@ -660,6 +666,7 @@ body {
     .text-wrap {
       width: 100%;
       max-width: 800px;
+      padding: 0 30px;
 
       h2 {
         font-size: $font * 0.56;
@@ -737,6 +744,7 @@ body {
 
   .wrap {
     @extend .container;
+    overflow-x: hidden;
 
     .grid {
       width: 100%;
@@ -907,4 +915,12 @@ body {
     }
   }
 }
-@import 'media-query';
+
+@import '/media-query/w1440.scss';
+@import '/media-query/w1024.scss';
+@import '/media-query/w960.scss';
+@import '/media-query/w890.scss';
+@import '/media-query/w720.scss';
+@import '/media-query/w620.scss';
+@import '/media-query/w480.scss';
+@import '/media-query/w420.scss';
