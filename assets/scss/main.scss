@@ -1,5 +1,6 @@
 @import 'variables';
 
+
 html,
 body {
   margin: 0;
@@ -48,9 +49,8 @@ body {
 
 .header {
   @extend .flex-center;
- /* background-color: $main_color;*/
-  /*background-image: url('~assets/img/vektor-50.svg');*/
-  background-color: #000;
+  background-color: $main_color;
+  background-image: url('~assets/img/vektor-50.svg');
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -61,6 +61,7 @@ body {
     @extend .flex-center;
     align-items: flex-start;
     position: relative;
+    padding: 0px 35px;
 
 
     .text-wrap {
@@ -75,6 +76,7 @@ body {
         color: $white;
         letter-spacing: 5px;
         margin-bottom: 30px;
+        margin-top: 0px;
         filter: drop-shadow(11.184px 16.581px 12px rgba(1, 1, 1, 0.8));
       }
 
@@ -97,7 +99,7 @@ body {
       height: 400px;
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: 35px;
       transform: translateY(50%);
 
       .wrap {
@@ -139,6 +141,7 @@ body {
 
     }
   }
+
 }
 
 .services {
@@ -883,7 +886,7 @@ body {
 
           i {
             color: $main_color;
-            margin-right:  15px;
+            margin-right: 15px;
 
           }
         }
@@ -904,3 +907,4 @@ body {
     }
   }
 }
+@import 'media-query';
