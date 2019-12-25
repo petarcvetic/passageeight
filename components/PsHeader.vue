@@ -35,53 +35,13 @@
         <h2>OUR SERVICES</h2>
       </div>
     </div>
-    <div>
-      <v-stage ref="stage" :config="stageSize">
-        <v-layer ref="layer">
-          <v-image :config="{
-            image: image
-          }" />
-        </v-layer>
-      </v-stage>
-    </div>
   </div>
 </template>
 <script>
-
-
 export default {
 
-  name: 'PsHeader',
-  data() {
-    return {
-      stageSize: {
-        width: 1980,
-        height: 1024
-      },
-      image: null
-    };
-  },
-  mounted() {
-/*
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-
-    this.stageSize.width = width;
-    this.stageSize.height = height;*/
-
-   
-
-
-    const image = new window.Image();
-    image.src = require(`@/assets/img/vektor-50.svg`);
-
-    console.log(image)
-    image.onload = () => {
-      // set image only when it is loaded
-      this.image = image;
-    };
-
-  }
+  name: 'PsHeader'
+  
 };
 
 </script>

@@ -1,5 +1,6 @@
 @import 'variables';
 
+
 html,
 body {
   margin: 0;
@@ -48,9 +49,8 @@ body {
 
 .header {
   @extend .flex-center;
- /* background-color: $main_color;*/
-  /*background-image: url('~assets/img/vektor-50.svg');*/
-  background-color: #000;
+  background-color: $main_color;
+  background-image: url('~assets/img/vektor-50.svg');
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -61,6 +61,7 @@ body {
     @extend .flex-center;
     align-items: flex-start;
     position: relative;
+    padding: 0px 35px;
 
 
     .text-wrap {
@@ -75,6 +76,7 @@ body {
         color: $white;
         letter-spacing: 5px;
         margin-bottom: 30px;
+        margin-top: 0px;
         filter: drop-shadow(11.184px 16.581px 12px rgba(1, 1, 1, 0.8));
       }
 
@@ -97,7 +99,7 @@ body {
       height: 400px;
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: 35px;
       transform: translateY(50%);
 
       .wrap {
@@ -139,6 +141,7 @@ body {
 
     }
   }
+
 }
 
 .services {
@@ -276,7 +279,7 @@ body {
   @extend .container;
   @extend .grid;
   height: 100vh;
-  padding: 30px 50px;
+
 
   .text-wrap {
     grid-column: 1 / span 6;
@@ -456,7 +459,8 @@ body {
 
       .player-full {
         width: 100%;
-        max-width: unset;
+        max-width: 1200px;
+        margin: 0 auto;
         height: 500px;
       }
 
@@ -471,6 +475,7 @@ body {
           @extend .flex-start;
           align-items: center;
           height: 100%;
+
 
           h2 {
             font-size: $font * 0.56;
@@ -532,7 +537,7 @@ body {
 .why-container {
   @extend .container-full;
   background: $black-bg;
-  padding: 250px 30px;
+  padding: 250px 0px;
 
   .wrap {
     @extend .container;
@@ -542,6 +547,8 @@ body {
     max-height: 600px;
 
     .text-wrap {
+      position: relative;
+
       h2 {
         font-size: $font * 0.56;
         letter-spacing: 1px;
@@ -565,8 +572,10 @@ body {
       .text-box {
         @extend .flex-end;
         position: absolute;
-        top: -103px;
+        top: -110px;
         right: 0;
+        width: 830px;
+        align-items: end;
 
         p {
           font-size: $font * 1.66;
@@ -657,6 +666,7 @@ body {
     .text-wrap {
       width: 100%;
       max-width: 800px;
+      padding: 0 30px;
 
       h2 {
         font-size: $font * 0.56;
@@ -734,6 +744,7 @@ body {
 
   .wrap {
     @extend .container;
+    overflow-x: hidden;
 
     .grid {
       width: 100%;
@@ -883,7 +894,7 @@ body {
 
           i {
             color: $main_color;
-            margin-right:  15px;
+            margin-right: 15px;
 
           }
         }
@@ -904,3 +915,12 @@ body {
     }
   }
 }
+
+@import '/media-query/w1440.scss';
+@import '/media-query/w1024.scss';
+@import '/media-query/w960.scss';
+@import '/media-query/w890.scss';
+@import '/media-query/w720.scss';
+@import '/media-query/w620.scss';
+@import '/media-query/w480.scss';
+@import '/media-query/w420.scss';

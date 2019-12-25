@@ -1,0 +1,215 @@
+@media only screen and (max-width: 1024px) {
+
+  .services {
+
+    .grid {
+      grid-template-rows: 60px auto 30px;
+
+
+      .link-wrap {
+        grid-column: 1 / span 4;
+        padding: 0px 35px;
+        height: 280px;
+
+        div {
+          font-size: $font * 0.20;
+          line-height: $font * 0.40;
+          color: $grey;
+          margin-bottom: 20px;
+          margin-right: 15px;
+
+        }
+      }
+
+
+      .text-area {
+
+        grid-column: 6 / span 5;
+      }
+
+    }
+  }
+
+  .strategies {
+
+    .text-wrap {
+
+      .wrap {
+
+
+        h2 {
+          font-size: $font * 0.48;
+          line-height: $font * 0.58;
+          margin: 25px 0;
+        }
+
+        p {
+          font-size: $font *0.18;
+          line-height: $font * 0.25;
+        }
+
+
+      }
+    }
+
+  }
+
+  .scroll-section {
+    .video-section {
+
+
+
+      .video-wrap {
+        height: 90%;
+        margin-top: 70px;
+
+
+        .video-player-box {
+
+
+          .vjs_video_3-dimensions {
+            margin: 0 auto;
+            max-width: 1200px;
+
+            .vjs-big-play-button {
+              width: 80px;
+              height: 80px;
+              top: -33px;
+              left: 286px;
+
+            }
+          }
+        }
+
+
+
+        .text-wrap {
+
+
+          .wrap {
+
+            padding: 0 30px;
+
+            h2 {
+              font-size: $font * 0.4;
+              line-height: $font * 0.5;
+
+            }
+
+            p {
+              font-size: $font * 0.20;
+              line-height: $font * 0.28;
+            }
+
+
+          }
+        }
+
+      }
+    }
+  }
+
+
+
+  .why-container {
+    background: $black-bg;
+
+
+    .wrap {
+      padding: 0;
+
+      .text-wrap {
+        padding: 0 30px;
+
+        h2 {
+          font-size: $font * 0.4;
+          line-height: $font * 0.5;
+
+        }
+
+        p {
+          font-size: $font *0.2;
+          line-height: $font * 0.28;
+
+        }
+
+        .text-box {
+          right: 40px;
+
+          p {
+            font-size: $font * 1.2;
+            line-height: $font * 1.2;
+          }
+
+          .normal,
+          span {
+            font-size: $font * 0.8;
+            line-height: $font;
+          }
+        }
+      }
+
+      .hover-wrap {
+
+
+
+        .single {
+
+
+          span {}
+
+
+        }
+
+        p {}
+      }
+    }
+  }
+
+
+  .shadow {
+    height: 700px;
+
+    .wrap {
+
+
+      .text-wrap {
+        width: 70%;
+      }
+    }
+  }
+
+  .form-section {
+
+    padding: 120px 0px;
+
+    .wrap {
+      width: 70%;
+      margin: 0 auto 0 0;
+
+      .text-wrap {
+
+        padding: 0 30px;
+
+        h2 {
+          font-size: $font * 0.56;
+          line-height: $font * 0.70;
+
+
+        }
+
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+}
