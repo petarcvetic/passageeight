@@ -37,7 +37,9 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-   { src: '~plugins/nuxt-video-player-plugin.js', ssr: false }
+   { src: '~plugins/nuxt-video-player-plugin.js', ssr: false },
+   { src: '~/plugins/nuxt-konva', ssr: false } 
+ 
    
   ],
   /*
