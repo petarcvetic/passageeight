@@ -18,6 +18,7 @@ body {
   padding: 20px 30px;
   box-sizing: border-box;
   height: 50px;
+  z-index: 9;
   @extend .flex-end;
 
   ul {
@@ -51,11 +52,18 @@ body {
 .header {
   @extend .flex-center;
   background-color: $main_color;
-  background-image: url('~assets/img/vektor-50.svg');
-  background-size: cover;
+  /* background-image: url('~assets/img/vektor-50.svg');
+  background-size: cover;*/
   height: 100vh;
   width: 100%;
   position: relative;
+
+  #particles-js {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+  }
 
   .wrap {
 
@@ -80,6 +88,7 @@ body {
         margin-bottom: 30px;
         margin-top: 0px;
         filter: drop-shadow(11.184px 16.581px 12px rgba(1, 1, 1, 0.8));
+        z-index: 99;
       }
 
       p {
@@ -90,6 +99,7 @@ body {
         text-align: left;
         font-weight: normal;
         color: $white;
+        z-index: 99;
       }
     }
 
@@ -102,6 +112,7 @@ body {
       position: absolute;
       bottom: 0;
       left: 35px;
+      z-index: 99;
       transform: translateY(50%);
 
       .wrap {
@@ -384,28 +395,17 @@ body {
     #box {
       position: absolute;
       top: 50%;
-      right: 30%;
+      left: 60%;
       margin-top: -300px;
+      display: flex;
 
-      #innerBox {
-
-        width: 450%;
-
-        h2 {
-          background: linear-gradient(90deg, rgba(255, 95, 136, 1) 0%, rgba(178, 27, 66, 1) 27%, rgba(0, 0, 0, 1) 100%);
-          font-size: $font * 1.50;
-          letter-spacing: 3px;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-family: $secondFam;
-          font-weight: 800;
-          text-align: center;
-
-          span {
-            color: transparent;
-          }
-        }
+      span {
+        font-size: $font * 1.6;
+        font-weight: bolder;
+        line-height: $font;
+        transition: 0.4s;
       }
+
     }
   }
 
@@ -750,7 +750,7 @@ body {
   .wrap {
     @extend .container;
     box-sizing: border-box;
-    padding: 0 30px;   
+    padding: 0 30px;
 
     .grid {
       width: 100%;
