@@ -22,6 +22,7 @@
       </div>
     </div>
     <div class="scroll-section">
+       <scroll-vue />
       <client-only>
         <video-vue />
       </client-only>

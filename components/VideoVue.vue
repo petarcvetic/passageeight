@@ -44,7 +44,7 @@ export default {
           type: "video/mp4",
           src: require(`@/assets/video/video.mp4`)
         }],
-        // poster: "/static/images/author.jpg",
+        // poster: "@/assets/img/arrow-red.png,
       }
     }
   },

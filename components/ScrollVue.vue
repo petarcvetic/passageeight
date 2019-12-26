@@ -1,10 +1,8 @@
 <template>
   <div>
     <div id="animation" class="section">
-      <div id="box">
-        <div id="innerBox">
-          <h2>How Can Passage 8 Help You Grow Your Business<span> ?</span></h2>
-        </div>
+      <div id="box">       
+          <img src="@/assets/img/how-can-we-help.png" alt=""><span id="span"> ?</span>      
       </div>
     </div>
   </div>
@@ -21,16 +19,32 @@ export default {
       curviness: 0,
       values: [
         { x: 0, y: anime.innerHeight / 2 },
-        { x: -window.innerWidth * 2.2, y: anime.innerHeight / 2 }
+        { x: -window.innerWidth * 2.5, y: anime.innerHeight / 2 }      
       ]
     };
 
+     const zoom = {
+     
+        curviness: 0,
+        values: [
+          { fontSize: 160 },
+          { fontSize: 5000 }
+        ]
+      };
 
-    const tween = new TimelineLite();
+
+    let tween = new TimelineLite();
 
     tween.add(
       TweenLite.to("#box", 1, {
         bezier: scrole,
+        ease: Power1.easeInout
+      })
+    );
+
+    tween.add(
+      TweenLite.to("#span", 1, {
+        bezier: zoom,
         ease: Power1.easeInout
       })
     );
