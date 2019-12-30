@@ -215,25 +215,9 @@
        #col-1{
             padding-right: 60px;
        }
-        #col-2,
-        #col-3,
-        #col-5 {
-          grid-column: span 4;
-          
-        }
-        #col-4 {
-          grid-row: 1;
-          grid-column: 7/ span 6;
-          
-        }
+    
 
-        #col-5 {        
-
-          h4 {
-            margin-top: 25px;
-          }
-        
-        }
+     
        
       }
     }

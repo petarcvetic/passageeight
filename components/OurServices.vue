@@ -1,19 +1,31 @@
 <template>
-  <div class="container-full">
+  <div id="serviceAnime" class="container-full">
+    <div class="container">
+      <div class="header-box">
+        <div class="wrap">
+          <p>LEARN MORE</p>
+          <img src="@/assets/img/arrow-right.png" alt="">
+        </div>
+        <h2 id="servText">OUR SERVICES</h2>
+      </div>
+    </div>
     <div class="grid">
       <div class="link-wrap">
-        <div v-for="(service, index) in services"  :class="{'active': show.id === index}" @mouseover="textHover(index)">{{service.title}}</div>
+        <div v-for="(service, index) in services" :class="{'active': show.id === index}" @mouseover="textHover(index)">{{service.title}}</div>
       </div>
-      <img :src="require(`@/assets/img/${show.img}`)" alt="">
-      <div class="text-area">
-        <div class="head">
-          <h3>{{show.h}}</h3>
-          <span>{{show.num}}<span class="line"></span></span>
-        </div>
-        <div class="body">
-          <p v-html="show.text"></p>
-        </div>
-      </div>
+      <transition name="slide-fade">
+        <img  :src="require(`@/assets/img/${show.img}`)" :key="show.id" alt="">
+        
+        </transition>
+          <div class="text-area">
+            <div class="head">
+              <h3>{{show.h}}</h3>
+              <span>{{show.num}}<span class="line"></span></span>
+            </div>
+            <div class="body">
+              <p v-html="show.text"></p>
+            </div>
+          </div>
     </div>
   </div>
 </template>
@@ -133,13 +145,64 @@ export default {
   },
   methods: {
     textHover(i) {
-       this.show.id = i;
+      this.show.id = i;
       this.show.num = this.services[i].num;
       this.show.img = this.services[i].img;
       this.show.h = this.services[i].h;
-      this.show.text = this.services[i].text;    }
+      this.show.text = this.services[i].text;
+    }
+
+  },
+  mounted() {
+    /* let anime = document.getElementById('serviceAnime');
+      let servText = document.getElementById('servText').getBoundingClientRect();
+       
+
+       console.log(servText.top, servText.left)
+
+      const scrole = {
+        curviness: 0,
+        values: [
+          { x:0 , y: -122, fontSize: 219 },
+          { x: 30, y: -90, fontSize: 40 }   
+        ]
+      };
+
+       const zoom = {
+       
+          curviness: 0,
+          values: [
+            { fontSize: 160 },
+            { fontSize: 5000 }
+          ]
+        };
+
+
+      let tween = new TimelineLite();
+
+      tween.add(
+        TweenLite.to("#servText", 1, {
+          bezier: scrole,
+          ease: Power1.easeInout
+        })
+      );
+  
+
+      const controller = new ScrollMagic.Controller();
+
+      const scene = new ScrollMagic.Scene({
+          triggerElement: "#serviceAnime",
+          duration: 2000,
+          triggerHook: 0
+        })
+        .setTween(tween)
+        //.addIndicators()     
+        .setPin('#serviceAnime')
+        .addTo(controller)*/
 
   }
+
+
 };
 
 </script>

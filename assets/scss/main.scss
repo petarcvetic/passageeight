@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'animations.scss';
+
 
 
 html,
@@ -103,6 +105,17 @@ body {
       }
     }
 
+
+  }
+
+}
+
+.services {
+
+  .container {
+    position: relative;
+
+
     .header-box {
       @extend .flex-between;
       background: $dark_pink;
@@ -110,10 +123,10 @@ body {
       width: 370px;
       height: 400px;
       position: absolute;
-      bottom: 0;
-      left: 35px;
+      top: 0;
+      left: -15px;
       z-index: 99;
-      transform: translateY(50%);
+      transform: translateY(-50%);
 
       .wrap {
         @extend .flex-between;
@@ -142,7 +155,7 @@ body {
         }
       }
 
-      h2 {
+      /*     h2 {
         font-size: $font * 0.4;
         text-align: center;
         margin-bottom: $mb-60;
@@ -150,19 +163,30 @@ body {
         font-family: $secondFam;
         font-weight: 800;
         filter: drop-shadow(0px -2px 9px rgba(0, 0, 0, 0.2));
+      }*/
+      h2 {
+
+        font-size: $font * 2.19;
+        letter-spacing: 1px;
+        line-height: $font * 1.49;
+        color: #ffffff;
+        font-family: $secondFam;
+        font-weight: 800;
+        filter: drop-shadow(0px -2px 9px rgba(0, 0, 0, 0.2));
+        position: absolute;
+        min-width: 1572px;
+        bottom: -122px;
+        margin: 0 auto;
+        transition: 0.2s;
       }
-
     }
+
   }
-
-}
-
-.services {
-
-  margin-top: 300px;
 
   .grid {
     grid-template-rows: 150px auto 80px;
+    padding-top: 300px;
+
 
     img {
       grid-column: 8 / -1;
@@ -745,23 +769,32 @@ body {
 .footer {
   @extend .container-full;
   background: $black-bg;
-  padding-top: 100px;
+  padding-top: 40px;
 
   .wrap {
     @extend .container;
-    box-sizing: border-box;
-    padding: 0 30px;
 
     .grid {
       width: 100%;
       grid-column-gap: 100px;
-      grid-row-gap: 15px;
+      grid-row-gap: 40px;
+      box-sizing: border-box;
+      padding: 0 30px;
 
       .col {
         grid-column: span 3;
-        @extend .flex-center;
+        @extend .flex-start;
         align-items: flex-start;
         flex-direction: column;
+
+        h2 {
+          font-size: $font * 0.60;
+          font-weight: bold;
+          color: $main_color;
+          font-family: $secondFam;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
 
         h3 {
           font-size: $font * 0.24;
@@ -771,14 +804,6 @@ body {
           font-weight: 600;
         }
 
-        h4 {
-          font-size: $font * 0.20;
-          line-height: $font * 0.32;
-          color: $main_color;
-          font-family: $secondFam;
-          font-weight: 600;
-          margin: 15px 0;
-        }
 
         p {
           font-size: $font * 0.14;
@@ -808,84 +833,22 @@ body {
           max-width: 183px;
         }
 
-        .input {
-          @extend .flex-start;
-          align-items: center;
-          width: 100%;
-          max-width: 255px;
-          height: 50px;
-          background: $white;
-          position: relative;
-          padding-left: 15px;
-          box-sizing: border-box;
 
-          input {
-            background-color: transparent;
-            font-size: $font * 0.18;
-            letter-spacing: 0px;
-            line-height: $font * 0.32;
-            color: $main_color;
-            font-family: $secondFam;
-            font-weight: 400;
-            border: none;
-            outline: none;
-            position: absolute;
-            top: 0;
-            right: -15px;
-            width: 100%;
-            height: 50px;
-            z-index: 9;
-          }
+      }
 
-          i,
-          span {
-            color: $main_color;
-            margin-right: 5px;
-          }
+      #col-0 {
+        grid-column: span 12;
+        @extend .flex-center;
+        align-items: center;
+
+        p {
+          font-size: $font * 0.24;
         }
       }
 
-      #col-1 {
-        h3 {
-          font-size: $font * 0.30;
-          letter-spacing: 1px;
-          line-height: $font * 0.30;
-          color: $footer_white;
-          font-family: $mainFam;
-          font-weight: 600;
-          margin: 0px 0px 5px;
-        }
-      }
+      #col-1 {}
 
       #col-4 {
-        h3 {
-          font-size: $font * 0.22;
-          letter-spacing: 0px;
-          line-height: $font * 0.32;
-          color: $footer_white;
-          font-family: $secondFam;
-          font-weight: 400;
-        }
-
-        .btn {
-          width: 126px;
-          height: 34px;
-          background-color: $white;
-          font-size: $font * 0.14;
-          line-height: $font * 0.32;
-          color: $main_color;
-          font-family: $secondFam;
-          font-weight: 400;
-          text-align: center;
-          margin-top: 20px;
-          cursor: pointer;
-
-        }
-      }
-
-      #col-5 {
-        grid-column: 1 / -1;
-        padding-bottom: 40px;
 
         h4 {
           margin-top: 0px;
@@ -907,6 +870,8 @@ body {
           }
         }
       }
+
+
 
       .social-wrap {
         grid-column: 1 / -1;

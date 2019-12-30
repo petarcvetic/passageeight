@@ -1,5 +1,6 @@
 <template>
   <div>
+   
     <div class="services">
       <our-services />
     </div>
@@ -22,7 +23,7 @@
       </div>
     </div>
     <div class="scroll-section">
-       <scroll-vue />
+     <scroll-vue />
       <client-only>
         <video-vue />
       </client-only>
