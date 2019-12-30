@@ -28,13 +28,7 @@
           that you want to present to the world?
           Passage 8 is here to help! </p>
       </div>
-      <div class="header-box">
-        <div class="wrap">
-          <p>LEARN MORE</p>
-          <img src="@/assets/img/arrow-right.png" alt="">
-        </div>
-        <h2>OUR SERVICES</h2>
-      </div>
+    
     </div>
 
     

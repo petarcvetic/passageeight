@@ -126,6 +126,25 @@
         }
       }
 
+      .footer {
+
+        .wrap {
+
+          .grid {
+            grid-column-gap: 30px;
+
+            #col-4{             
+
+              i, span, .btn {               
+                font-size: $font * 0.14;
+               
+              }
+            }
+
+
+          }
+        }
+      }
 
 
     }

@@ -12,7 +12,7 @@ export default {
   name: 'ScrollVue',
 
   mounted() {
-    let anime = document.getElementById('animation');
+   /* let anime = document.getElementById('animation');
 
 
     const scrole = {
@@ -59,7 +59,7 @@ export default {
       .setTween(tween)
       .addIndicators()     
       .setPin('#animation')
-      .addTo(controller)
+      .addTo(controller)*/
 
     }
 };

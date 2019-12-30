@@ -118,10 +118,15 @@
 
   .footer {
 
+    h3 {
+      margin: 25px 0 0 0;
+    }
+
     .wrap {
 
       .grid {
         grid-column-gap: 30px;
+        grid-row-gap: 0px;
 
         .col {
           grid-column: span 6;
@@ -139,12 +144,29 @@
 
         }
 
+        #col-4 {
+          h3 {
+            margin: 25px 0;
+          }
+        }
+
         #col-5 {
           grid-column: span 12;
+          padding-bottom: 15px;
+
+          a {
+            font-size: $font * 0.18;
+          }
 
         }
 
+        .social-wrap {
+          i {
 
+            margin: 20px 15px;
+
+          }
+        }
       }
     }
   }
