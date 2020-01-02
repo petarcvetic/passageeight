@@ -91,6 +91,15 @@ body {
         margin-top: 0px;
         filter: drop-shadow(11.184px 16.581px 12px rgba(1, 1, 1, 0.8));
         z-index: 99;
+
+        .fadeOut {
+          opacity: 0;
+          transition: 0.8s;
+        }
+
+        .fadeIn {
+          opacity: 1;
+        }
       }
 
       p {
