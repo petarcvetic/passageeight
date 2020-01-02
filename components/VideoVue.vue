@@ -94,11 +94,11 @@ export default {
     },
     // or listen state event
     playerStateChanged(playerCurrentState) {
-      console.log('player current update state', playerCurrentState)
+    
     },
     // player is ready
     playerReadied(player) {
-      console.log('example 01: the player is readied', player)
+    
     }
   }
 }
