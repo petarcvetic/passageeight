@@ -11,6 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.9.2",
     "nuxt": "^2.0.0",
     "particles.js": "^2.0.0",
     "vue-video-player": "^5.0.2"

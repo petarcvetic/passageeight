@@ -1,7 +1,7 @@
 <template>
   <div class="main">
 <client-only>
-    <ps-header />
+   <!-- <ps-header /> -->
   </client-only>  
     <nuxt />
     <ps-footer />
