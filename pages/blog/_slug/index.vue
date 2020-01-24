@@ -1,15 +1,15 @@
 <template>
   <div>
-    <h2>{{$route.params.slug}}</h2>
+    <h2>{{post}}</h2>
   </div>
 </template>
 <script>
-import axios from 'axios';
+import { mapState } from 'vuex';
 export default {
 
   data() {
     return {
-      post: []
+     
     }
   },
      head () {
@@ -21,12 +21,16 @@ export default {
         ]
       }
     },
-  asyncData(context) {
+  async fetch({store, params}) {
 
-    return axios.get(`http://cms.test/api/post/${context.params.slug}`)
-      .then(({ data }) => {
-        return { post: data.data };
-      })
+    await store.dispatch('getPost', {postSlug: params.slug})
+   
+  },
+  computed:{
+    ...mapState({
+       posts: 'posts', 
+       post: 'post'
+    })
   }
 
 

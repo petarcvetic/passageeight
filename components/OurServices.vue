@@ -3,29 +3,28 @@
     <div class="container">
       <div class="header-box">
         <div class="wrap">
-          <p>LEARN MORE</p>
+          <p><a href="#servicesBox">LEARN MORE</a></p>
           <img src="@/assets/img/arrow-right.png" alt="">
         </div>
         <h2 id="servText">OUR SERVICES</h2>
       </div>
     </div>
-    <div class="grid">
+    <div id="servicesBox" class="grid">
       <div class="link-wrap">
         <div v-for="(service, index) in services" :class="{'active': show.id === index}" @mouseover="textHover(index)">{{service.title}}</div>
       </div>
       <transition name="slide-fade">
-        <img  :src="require(`@/assets/img/${show.img}`)" :key="show.id" alt="">
-        
-        </transition>
-          <div class="text-area">
-            <div class="head">
-              <h3>{{show.h}}</h3>
-              <span>{{show.num}}<span class="line"></span></span>
-            </div>
-            <div class="body">
-              <p v-html="show.text"></p>
-            </div>
-          </div>
+        <img :src="require(`@/assets/img/${show.img}`)" :key="show.id" alt="">
+      </transition>
+      <div class="text-area">
+        <div class="head">
+          <h3>{{show.h}}</h3>
+          <span>{{show.num}}<span class="line"></span></span>
+        </div>
+        <div class="body">
+          <p v-html="show.text"></p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -150,11 +149,40 @@ export default {
       this.show.img = this.services[i].img;
       this.show.h = this.services[i].h;
       this.show.text = this.services[i].text;
+    },
+    isInViewport(elem) {
+     
+      var bounding = elem.getBoundingClientRect();
+      return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+
     }
 
   },
   mounted() {
-    /* let anime = document.getElementById('serviceAnime');
+
+
+    let h2 = document.getElementById('servText');
+   
+
+    window.addEventListener('scroll', () => {
+      let lm = this;
+      if (lm.isInViewport(h2)) {
+        if(!h2.classList.contains('our-services-anime')){
+             h2.classList.add('our-services-anime')
+        }            
+      } 
+    });
+
+
+
+
+
+    /*let anime = 
       let servText = document.getElementById('servText').getBoundingClientRect();
        
 

@@ -1,0 +1,293 @@
+.scroll-section {
+  @extend .container-full;
+  position: relative;
+  overflow: hidden;
+
+  #animation {
+    height: 100vh;
+    background: $white;
+    position: relative;
+
+    #box {
+      position: absolute;
+      top: 50%;
+      left: 60%;
+      margin-top: -300px;
+      display: flex;
+
+      span {
+        font-size: $font * 1.6;
+        font-weight: bolder;
+        line-height: $font;
+        transition: 0.4s;
+      }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+
+  .scroll-section {
+    .video-section {
+
+      .video-wrap {
+        .video-player-box {
+          padding: 0 30px;
+
+        }
+
+        .text-wrap {
+          align-items: center;
+          transition: 0.4s;
+
+
+          .wrap {
+            align-items: center;
+            height: 100%;
+
+
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+
+  .scroll-section {
+    .video-section {
+
+
+
+      .video-wrap {
+        height: 90%;
+        margin-top: 70px;
+
+
+        .video-player-box {
+
+
+          .vjs_video_3-dimensions {
+            margin: 0 auto;
+            max-width: 1200px;
+
+            .vjs-big-play-button {
+              width: 80px;
+              height: 80px;
+              top: -33px;
+              left: 286px;
+
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+
+}
+
+@media only screen and (max-width: 960px) {
+
+  .scroll-section {
+
+
+    .video-section {
+
+
+      .video-wrap {
+
+        height: 100%;
+        margin-top: 70px;
+        flex-direction: column-reverse;
+
+
+        .video-player-box {
+          width: 100%;
+          max-width: 700px;
+          padding: 40px;
+          height: 307px;
+
+
+          .vjs_video_3-dimensions {
+            max-width: 90%;
+
+
+            .vjs-big-play-button {
+              width: 80px;
+              height: 80px;
+              top: -35px;
+              left: 580px;
+
+            }
+          }
+        }
+
+        .player-full {
+          max-width: 90%;
+          margin: 0 auto;
+          height: 400px;
+        }
+
+        .text-wrap {
+          width: 100%;
+
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+
+  .scroll-section {
+    .video-section {
+
+
+      .video-wrap {
+
+
+        .video-player-box {
+          padding: 0;
+          max-width: 90%;
+
+          .vjs_video_3-dimensions {
+
+
+            .vjs-big-play-button {
+              left: 90%;
+            }
+          }
+        }
+
+        .text-wrap {
+
+
+          .wrap {
+
+            padding: 0 30px;
+
+
+            .link-wrap {
+              max-width: 280px;
+              margin-top: 35px;
+              height: 90px;
+
+              p {
+                font-size: $font * 0.14;
+
+              }
+
+              img {
+                width: 30px;
+                height: auto;
+              }
+
+            }
+
+
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+
+  .scroll-section {
+    .video-section {
+
+
+      .video-wrap {
+
+
+        .video-player-box {
+          height: 240px;
+
+          .vjs_video_3-dimensions {
+            height: 240px;
+
+            .vjs-big-play-button {
+              width: 60px;
+              height: 60px;
+              top: -25px;
+            }
+          }
+        }
+
+        .text-wrap {
+
+
+          .wrap {
+
+            padding: 0 30px;
+
+            h2 {
+              font-size: $font * 0.4;
+              line-height: $font * 0.5;
+
+            }
+
+            p {
+              font-size: $font * 0.18;
+              line-height: $font * 0.24;
+            }
+
+            .link-wrap {
+              max-width: 280px;
+              margin-top: 35px;
+              height: 90px;
+
+
+              p {
+                font-size: $font * 0.14;
+
+              }
+
+              img {
+                width: 30px;
+                height: auto;
+              }
+
+
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+
+  .scroll-section {
+    .video-section {
+
+      .video-wrap {
+
+        .text-wrap {
+
+          .wrap {
+
+            p {
+              font-size: $font * 0.16;
+              line-height: $font * 0.20;
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+}

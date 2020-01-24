@@ -19,9 +19,9 @@
           <div class="wrap">
             <h3>Information</h3>
             <ul>
-              <li>About us</li>
+              <li><nuxt-link to='/about'>About us</nuxt-link></li>
               <li>More Search</li>
-              <li>Blog</li>
+              <li><nuxt-link to='/blog'>Blog</nuxt-link></li>
               <li>Testemonials</li>
               <li>Events</li>
             </ul>
@@ -31,10 +31,10 @@
           <div class="wrap">
             <h3>Helpful Links</h3>
             <ul>
-              <li>Services</li>
+              <li><nuxt-link to='/services'>Services</nuxt-link></li>
               <li>Supports</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
+              <li><nuxt-link to='/'>Terms & Conditions</nuxt-link></li>
+              <li><nuxt-link to='/'>Privacy Policy</nuxt-link></li>
             </ul>
           </div>
         </div>

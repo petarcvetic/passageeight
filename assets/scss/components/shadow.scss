@@ -1,0 +1,72 @@
+.shadow {
+  @extend .container-full;
+  @extend .flex-start;
+  height: 800px;
+  background: $main_color;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  #eight {
+    position: absolute;
+    left: 50%;
+    z-index: 9;
+  }
+
+  #shadow {
+    position: absolute;
+    right: 15%;
+  }
+
+
+  .wrap {
+    @extend .container;
+    z-index: 9999;
+
+    .text-wrap {
+      width: 100%;
+      max-width: 800px;
+      padding: 0 30px;
+      box-sizing: border-box;
+
+      h2 {
+        color: $white;
+        margin-top: 0px;
+        font-weight: 600;
+      }
+
+      p {
+        color: $ghoust_white;
+        font-family: $secondFam;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .shadow {
+    height: 700px;
+
+    .wrap {
+
+      .text-wrap {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+
+  .shadow {
+
+    height: 500px;
+
+    img {
+      height: 750px;
+    }
+
+  }
+}

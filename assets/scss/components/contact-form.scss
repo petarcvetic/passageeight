@@ -1,0 +1,132 @@
+.form-section {
+  @extend .container-full;
+  background: $white;
+  padding: 250px 0px;
+
+  .wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+
+    .text-wrap {
+      h2 {
+        font-size: $font * 0.8;
+        letter-spacing: 1px;
+        line-height: $font * 0.95;
+        color: $black;
+        font-weight: 600;
+        max-width: 880px;
+        margin-top: 0px;
+
+        span {
+          color: $main_color;
+        }
+      }
+
+      .btn {
+        height: 50px;
+        width: 220px;
+        background: $main_color;
+        @extend .flex-center;
+        align-items: center;
+        transition: 0.4s;
+        cursor: pointer;
+
+
+        p {
+          color: $white;
+          font-size: 14px;
+          letter-spacing: 2px;
+          line-height: 16px;
+          margin: 0;
+        }
+      }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+
+  .form-section {
+    padding: 150px 0px;
+
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+  .form-section {
+
+    padding: 120px 0px;
+
+    .wrap {
+      width: 70%;
+      margin: 0 auto 0 0;
+
+      .text-wrap {
+
+        padding: 0 30px;
+
+        h2 {
+          font-size: $font * 0.56;
+          line-height: $font * 0.70;
+
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+
+
+  .form-section {
+
+    padding: 90px 0px;
+
+    .wrap {
+      width: 100%;
+      margin: 0 auto 0 0;
+
+      .text-wrap {
+
+        padding: 0 30px;
+
+        h2 {
+          font-size: $font * 0.40;
+          line-height: $font * 0.50;
+
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .form-section {
+
+    padding: 90px 0px;
+
+    .wrap {
+      width: 100%;
+      margin: 0 auto 0 0;
+
+      .text-wrap {
+
+        padding: 0 30px;
+
+        h2 {
+          font-size: $font * 0.40;
+          line-height: $font * 0.50;
+
+        }
+
+      }
+    }
+  }
+}
