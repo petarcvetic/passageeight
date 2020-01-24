@@ -1,6 +1,7 @@
 
 export default {
   mode: 'universal',
+
   /*
   ** Headers of the page
   */
@@ -32,6 +33,12 @@ export default {
 
       '@/assets/scss/main.scss'
   ],
+
+  transition: {
+    name: 'fade',
+    mode: 'out-in'
+
+  },
  
   /*
   ** Plugins to load before mounting the App
@@ -51,7 +58,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    
+    '@nuxtjs/axios',
   ],
   /*
   ** Build configuration

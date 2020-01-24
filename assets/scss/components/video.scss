@@ -1,0 +1,138 @@
+.video-section {
+  background: $black-bg;
+  @extend .container-full;
+  @extend .flex-center;
+  align-items: center;
+
+
+  .video-wrap {
+    @extend .container;
+    @extend .flex-between;
+    align-items: center;
+    height: 90%;
+    transition: 0.4s;
+    margin-top: 70px;
+
+
+    .video-player-box {
+      width: 33%;
+      max-width: 451px;
+      height: 307px;
+      transition: 0.4s;
+
+
+      .vjs_video_3-dimensions {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: 0.4s;
+
+        .vjs-big-play-button {
+          width: 100px;
+          height: 100px;
+          border-radius: 50px;
+          background-color: $main_color;
+          border: none;
+          position: absolute;
+          top: -50px;
+          left: 400px;
+
+          .vjs-icon-placeholder {
+            &:before {
+              content: "\f101";
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 55px;
+            }
+          }
+        }
+      }
+    }
+
+    .player-full {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 500px;
+    }
+
+    .text-wrap {
+      width: 60%;
+      @extend .flex-start;
+      align-items: center;
+      transition: 0.4s;
+
+
+      .wrap {
+        @extend .flex-start;
+        align-items: center;
+        height: 100%;
+
+
+        h2 {
+          color: $white;
+          font-weight: 600;
+
+
+          span {
+            color: $main_color;
+          }
+        }
+
+        p {
+          color: $white;
+          font-weight: 400;
+        }
+
+        .link-wrap {
+          @extend .flex-between;
+          width: 100%;
+          height: 100px;
+          align-items: center;
+          max-width: 300px;
+          margin-top: 45px;
+          cursor: pointer;
+          border-top: 1px solid $main_color;
+
+          p {
+            font-size: $font * 0.14;
+            letter-spacing: 2px;
+            line-height: $font * 0.16;
+            color: $main_color;
+            font-weight: 600;
+            text-align: right;
+          }
+
+          img {
+            transform: translateX(-10px);
+            transition: 0.4s;
+          }
+
+          &:hover img {
+            transform: translateX(0);
+          }
+        }
+
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 720px) {
+
+  .video-wrap {
+
+    .wrap {
+      height: 100%;
+      max-height: 1000px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+  }
+}

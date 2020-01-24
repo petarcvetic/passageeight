@@ -1,0 +1,212 @@
+.why-container {
+  @extend .container-full;
+  background: $black-bg;
+  padding: 250px 0px;
+
+  .wrap {
+    @extend .container;
+    @extend .flex-start;
+    align-items: center;
+    height: 100%;
+    max-height: 600px;
+
+    .text-wrap {
+      position: relative;
+
+      h2 {
+        color: $white;
+        font-weight: 600;
+
+        span {
+          color: $main_color;
+        }
+      }
+
+      p {
+
+        color: $white;
+        font-family: $secondFam;
+        font-weight: 400;
+      }
+
+      .text-box {
+        @extend .flex-end;
+        position: absolute;
+        top: -110px;
+        right: 0;
+        width: 830px;
+        align-items: end;
+
+        p {
+          font-size: $font * 1.66;
+          letter-spacing: 3px;
+          line-height: $font * 1.39;
+          color: #202020;
+          font-weight: 600;
+          text-align: right;
+          margin: 0;
+        }
+
+        .normal,
+        span {
+          font-size: $font;
+          font-weight: 600;
+          color: #202020;
+        }
+      }
+    }
+
+    .hover-wrap {
+      width: 100%;
+      max-width: 750px;
+      margin: 35px auto;
+      @extend .flex-between;
+      align-items: flex-start;
+      margin: 90px auto 30px;
+
+
+      .single {
+        @extend .flex-between;
+        align-items: center;
+        height: 60px;
+        cursor: pointer;
+
+        span {
+          width: 30px;
+          height: 5px;
+          background: $white;
+
+        }
+
+        .active {
+          background: $main_color;
+        }
+      }
+
+      p {
+        font-size: $font *0.18;
+        line-height: $font * 0.25;
+        color: $white;
+        font-family: $secondFam;
+        font-weight: 400;
+        width: 70%;
+        text-align: left;
+        margin-top: 10px;
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+
+  .why-container {
+
+    .wrap {
+      padding: 0 30px;
+
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .why-container {
+    background: $black-bg;
+
+
+    .wrap {
+      padding: 0;
+
+      .text-wrap {
+        padding: 0 30px;
+
+
+
+        .text-box {
+          right: 40px;
+
+          p {
+            font-size: $font * 1.2;
+            line-height: $font * 1.2;
+          }
+
+          .normal,
+          span {
+            font-size: $font * 0.8;
+            line-height: $font;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+
+  .why-container {
+    padding: 200px 0px;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+
+
+  .why-container {
+
+    .wrap {
+
+      .text-wrap {
+
+        .text-box {
+          top: -190px;
+
+        }
+      }
+
+    }
+  }
+
+}
+
+@media only screen and (max-width: 720px) {
+
+
+  .why-container {
+    padding: 200px 0px 70px;
+
+    .wrap {
+
+      .text-wrap {
+
+        .text-box {
+          top: -130px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 90%;
+          right: unset;
+
+          p {
+            font-size: $font * 0.9;
+            letter-spacing: 3px;
+            line-height: $font * 0.95;
+
+          }
+
+          .normal,
+          span {
+            font-size: $font * 0.5;
+            line-height: $font * 0.75;
+
+          }
+        }
+      }
+
+      .hover-wrap {
+        padding: 0 30px;
+        margin: 40px auto 0px;
+      
+      }
+    }
+  }
+}

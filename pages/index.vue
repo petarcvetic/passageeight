@@ -1,6 +1,8 @@
 <template>
   <div>
-   
+    <div class="" v-if="isLoading">
+      <svg-vue />
+    </div>
     <div class="services">
       <our-services />
     </div>
@@ -23,7 +25,7 @@
       </div>
     </div>
     <div class="scroll-section">
-     <scroll-vue />
+      <!-- <scroll-vue />-->
       <client-only>
         <video-vue />
       </client-only>
@@ -40,7 +42,8 @@ import VideoVue from '../components/VideoVue.vue';
 import WhyVue from '../components/WhyVue.vue';
 import ShadowVue from '../components/Shadow.vue';
 import ContactForm from '../components/ContactForm.vue';
-
+import SvgVue from '../components/Svg.vue';
+import { mapState } from 'vuex';
 
 export default {
   components: {
@@ -49,8 +52,14 @@ export default {
     VideoVue,
     WhyVue,
     ShadowVue,
-    ContactForm
+    ContactForm,
+    SvgVue
 
+  },
+  data() {
+    return {
+      loading: false
+    }
   },
   head() {
     return {
@@ -72,6 +81,24 @@ export default {
       ]
     }
   },
+
+  fetch({ store,  from }) {
+    let isFrom = from;
+
+    if (isFrom) {
+
+      store.commit('IS_LOADING', false)
+
+    }else{
+      store.commit('IS_LOADING', true)
+    }
+
+  },
+  computed: {
+    ...mapState({
+      isLoading: 'isLoading'
+    })
+  }
 
 
 }
