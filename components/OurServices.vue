@@ -156,16 +156,15 @@ export default {
       return (
         bounding.top >= 0 &&
         bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) 
       );
 
     }
 
   },
   mounted() {
-
-
+  console.log(window.innerWidth)
+  if(window.innerWidth < 721){
     let h2 = document.getElementById('servText');
    
 
@@ -178,58 +177,8 @@ export default {
       } 
     });
 
-
-
-
-
-    /*let anime = 
-      let servText = document.getElementById('servText').getBoundingClientRect();
-       
-
-       console.log(servText.top, servText.left)
-
-      const scrole = {
-        curviness: 0,
-        values: [
-          { x:0 , y: -122, fontSize: 219 },
-          { x: 30, y: -90, fontSize: 40 }   
-        ]
-      };
-
-       const zoom = {
-       
-          curviness: 0,
-          values: [
-            { fontSize: 160 },
-            { fontSize: 5000 }
-          ]
-        };
-
-
-      let tween = new TimelineLite();
-
-      tween.add(
-        TweenLite.to("#servText", 1, {
-          bezier: scrole,
-          ease: Power1.easeInout
-        })
-      );
-  
-
-      const controller = new ScrollMagic.Controller();
-
-      const scene = new ScrollMagic.Scene({
-          triggerElement: "#serviceAnime",
-          duration: 2000,
-          triggerHook: 0
-        })
-        .setTween(tween)
-        //.addIndicators()     
-        .setPin('#serviceAnime')
-        .addTo(controller)*/
-
   }
-
+}
 
 };
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="" v-if="isLoading">
+    <div class="" v-if="!isLoading">
       <svg-vue />
     </div>
     <div class="services">
@@ -24,14 +24,12 @@
         </div>
       </div>
     </div>
-    <div class="scroll-section">
-      <!-- <scroll-vue />-->
-      <client-only>
-        <video-vue />
-      </client-only>
-      <why-vue />
-    </div>
-    <shadow-vue />
+    <scroll-vue />
+    <client-only>
+      <video-vue />
+    </client-only>
+    <why-vue />
+    <shadow-vue  v-if="winWidth > 720"/>
     <contact-form />
   </div>
 </template>
@@ -69,34 +67,25 @@ export default {
         name: 'description',
         content: 'Welcome'
       }],
-      script: [
-        { src: "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" },
-        { src: "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" },
-        { src: "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" },
-        { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineLite.min.js" },
-        { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js" },
-        { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/CSSPlugin.min.js" },
-        { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/BezierPlugin.min.js" }
-
-      ]
     }
   },
 
-  fetch({ store,  from }) {
+  fetch({ store, from }) {
     let isFrom = from;
 
     if (isFrom) {
 
       store.commit('IS_LOADING', false)
 
-    }else{
+    } else {
       store.commit('IS_LOADING', true)
     }
 
   },
   computed: {
     ...mapState({
-      isLoading: 'isLoading'
+      isLoading: 'isLoading',
+      winWidth: 'winWidth'
     })
   }
 

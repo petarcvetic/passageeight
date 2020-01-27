@@ -1,7 +1,8 @@
 .why-container {
   @extend .container-full;
   background: $black-bg;
-  padding: 250px 0px;
+  box-sizing: border-box;
+  padding: 250px 35px;
 
   .wrap {
     @extend .container;
@@ -102,10 +103,7 @@
 
   .why-container {
 
-    .wrap {
-      padding: 0 30px;
-
-    }
+    .wrap {}
   }
 }
 
@@ -118,7 +116,7 @@
       padding: 0;
 
       .text-wrap {
-        padding: 0 30px;
+
 
 
 
@@ -145,7 +143,7 @@
 @media only screen and (max-width: 960px) {
 
   .why-container {
-    padding: 200px 0px;
+    padding: 200px 35px;
   }
 }
 
@@ -173,39 +171,137 @@
 
 
   .why-container {
-    padding: 200px 0px 70px;
+    padding: 40px 35px 160px;
 
     .wrap {
 
       .text-wrap {
-
+       
+        p{
+           line-height: $font * 0.3;
+        }
         .text-box {
-          top: -130px;
+          top: unset;
           left: 50%;
           transform: translateX(-50%);
           width: 90%;
           right: unset;
 
           p {
-            font-size: $font * 0.9;
+            font-size: $font;
             letter-spacing: 3px;
-            line-height: $font * 0.95;
+            line-height: $font ;
 
           }
 
           .normal,
           span {
-            font-size: $font * 0.5;
-            line-height: $font * 0.75;
+            font-size: $font;
+            line-height: $font;
 
           }
         }
       }
 
       .hover-wrap {
-        padding: 0 30px;
-        margin: 40px auto 0px;
-      
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 40px 300px;
+        margin: 0px auto 46px;
+        position: relative;
+
+        .box {
+          display: flex;
+          justify-content: space-between;
+          grid-row: 1;
+          grid-column: 1 / -1;
+          width: 100%;
+        }
+
+        p {
+          grid-column: 2 / span 10;
+          width: 100%;
+          margin-top: 40px
+        }
+
+      }
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+
+  .why-container {
+
+    .wrap { 
+      .text-wrap {
+       
+        p{
+          
+        }
+        .text-box {       
+
+          p {
+            font-size: $font * 0.7;
+            letter-spacing: 3px;
+            line-height: $font * 0.8;
+
+          }
+
+          .normal,
+          span {
+            font-size: $font * 0.7;
+            line-height: $font* 0.8;
+
+          }
+        }
+      }  
+
+      .hover-wrap {
+    
+
+        p {
+          grid-column: 1 /  -1;
+        
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+
+  .why-container {
+    padding: 30px 35px 300px;
+    .wrap {   
+
+      .hover-wrap {
+    
+
+        p {
+          grid-column: 1 /  -1;
+        
+        }
+
+      }
+    }
+  }
+}
+@media only screen and (max-width: 320px) {
+
+  .why-container {
+    padding: 30px 35px 380px;
+    .wrap {   
+
+      .hover-wrap {
+    
+
+        p {
+          grid-column: 1 /  -1;
+           font-size: $font * 0.16;
+        }
+
       }
     }
   }

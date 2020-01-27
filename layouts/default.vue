@@ -4,7 +4,7 @@
   <ps-header />
   </client-only>  
     <nuxt />
-    <ps-footer />
+  <ps-footer /> 
 
   </div>
 </template>
@@ -16,7 +16,8 @@ export default {
   components: {
     PsHeader,
     PsFooter
-  }
+  },
+
 }
 
 </script>
