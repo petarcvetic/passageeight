@@ -1,6 +1,7 @@
 export const state = () => ({
   posts: [],
   post: [],
+  winWidth: '',
   isLoading: true
 });
 
@@ -8,12 +9,15 @@ export const mutations = {
   SET_POSTS(state, posts) {
     state.posts = posts
   },
-   SET_POST(state, post) {
+  SET_POST(state, post) {
     state.post = post
   },
   IS_LOADING(state, payload){
      state.isLoading = payload;
-  }
+  },
+  SET_WIDTH(state, payload){
+     state.winWidth = payload;
+  },
 }
 
 export const actions = {

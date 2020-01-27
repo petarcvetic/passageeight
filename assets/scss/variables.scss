@@ -22,8 +22,15 @@ $font: 100px;
 //margins
 
 $mb-60: 60px;
-.mt-0{
-  margin-top: 0px!important;
+
+.mt-0 {
+  margin-top: 0px !important;
+}
+
+//text
+
+.text-red{
+  color: $main_color;
 }
 
 //flex
@@ -58,12 +65,13 @@ $mb-60: 60px;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  box-sizing: border-box;
 
 }
 
 .container-full {
   width: 100%;
- 
+  box-sizing: border-box;
 
 }
 
@@ -76,14 +84,15 @@ $mb-60: 60px;
 }
 
 
-.d-none{
-   display: none !important;
+.d-none {
+  display: none !important;
 }
-.d-block{
-   display: block !important;
+
+.d-block {
+  display: block !important;
 }
 
 
-.position-rel{
+.position-rel {
   position: relative;
 }

@@ -1,8 +1,8 @@
 .strategies {
   @extend .container;
   @extend .grid;
-  height: 100vh;
-
+  height: 900px;
+  padding: 0 35px;
 
   .text-wrap {
     grid-column: 1 / span 6;
@@ -91,7 +91,7 @@
   .strategies {
 
     .text-wrap {
-      padding: 0 30px;
+     
 
     }
 
