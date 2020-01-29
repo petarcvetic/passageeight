@@ -4,7 +4,8 @@
       <svg-vue />
     </div>
     <div class="services">
-      <our-services />
+      <our-services  v-if="winWidth > 720"/>
+      <services-mob v-else/>
     </div>
     <div class="strategies">
       <div class="text-wrap">
@@ -23,22 +24,27 @@
           <img src="@/assets/img/osmica.png" alt="">
         </div>
       </div>
-    </div>
-    <scroll-vue />
+    </div>   
+    <how-mob v-if="winWidth < 721" />
     <client-only>
       <video-vue />
     </client-only>
     <why-vue />
-    <shadow-vue  v-if="winWidth > 720"/>
+    
+    <shadow-vue v-if="winWidth > 720" />
+    <shadow-mob v-else />
     <contact-form />
   </div>
 </template>
 <script>
 import OurServices from '../components/OurServices.vue';
+import ServicesMob from '../components/mob_components/ServicesMob.vue';
 import ScrollVue from '../components/ScrollVue.vue';
+import HowMob from '../components/mob_components/HowMob.vue';
 import VideoVue from '../components/VideoVue.vue';
 import WhyVue from '../components/WhyVue.vue';
 import ShadowVue from '../components/Shadow.vue';
+import ShadowMob from '../components/mob_components/ShadowMob.vue';
 import ContactForm from '../components/ContactForm.vue';
 import SvgVue from '../components/Svg.vue';
 import { mapState } from 'vuex';
@@ -46,10 +52,13 @@ import { mapState } from 'vuex';
 export default {
   components: {
     OurServices,
+    ServicesMob,
     ScrollVue,
     VideoVue,
+    HowMob,
     WhyVue,
     ShadowVue,
+    ShadowMob,
     ContactForm,
     SvgVue
 

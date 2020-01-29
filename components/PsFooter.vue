@@ -1,10 +1,13 @@
 <template>
   <div class="footer">
+    <div @click="backToTop()" id="backToTop">
+      <img src="@/assets/img/arrow-up.png" alt="">
+    </div>
     <div class="wrap">
       <div class="grid">
         <div id="col-0" class="col">
           <h2>Passage 8</h2>
-          <p class="mt-0">Your Digital Solution</p>
+          <p class="mt-0">Your Digital Solution <span class="text-red">.</span></p>
         </div>
         <div id="col-1" class="col">
           <h3>About Us</h3>
@@ -19,9 +22,13 @@
           <div class="wrap">
             <h3>Information</h3>
             <ul>
-              <li><nuxt-link to='/about'>About us</nuxt-link></li>
+              <li>
+                <nuxt-link to='/about'>About us</nuxt-link>
+              </li>
               <li>More Search</li>
-              <li><nuxt-link to='/blog'>Blog</nuxt-link></li>
+              <li>
+                <nuxt-link to='/blog'>Blog</nuxt-link>
+              </li>
               <li>Testemonials</li>
               <li>Events</li>
             </ul>
@@ -31,10 +38,16 @@
           <div class="wrap">
             <h3>Helpful Links</h3>
             <ul>
-              <li><nuxt-link to='/services'>Services</nuxt-link></li>
+              <li>
+                <nuxt-link to='/services'>Services</nuxt-link>
+              </li>
               <li>Supports</li>
-              <li><nuxt-link to='/'>Terms & Conditions</nuxt-link></li>
-              <li><nuxt-link to='/'>Privacy Policy</nuxt-link></li>
+              <li>
+                <nuxt-link to='/'>Terms & Conditions</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to='/'>Privacy Policy</nuxt-link>
+              </li>
             </ul>
           </div>
         </div>
@@ -63,6 +76,14 @@ export default {
       form: {
         text: '',
       }
+    }
+  },
+  methods: {
+    backToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
   }
 };

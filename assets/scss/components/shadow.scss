@@ -26,7 +26,7 @@
     .text-wrap {
       width: 100%;
       max-width: 800px;
-      padding: 0 30px;
+      padding: 0 35px;
       box-sizing: border-box;
 
       h2 {
@@ -62,11 +62,51 @@
 
   .shadow {
 
-    height: 500px;
+
 
     img {
       height: 750px;
     }
+
+  }
+}
+
+@media only screen and (max-width: 720px) {
+
+  .shadow-mob {
+
+    background: $black-bg;
+    box-sizing: border-box;
+    padding: 35px 50px 150px 50px;
+
+    h2 {
+      color: $white;
+      text-align: center;
+      font-size: $font * 0.56;    
+      line-height: $font * 0.76;
+    }
+
+    p {
+      color: $white;
+      text-align: center;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 360px) {
+
+  .shadow-mob {
+
+    padding: 35px 35px 80px 35px;
+
+    h2 {
+      
+      font-size: $font * 0.4;    
+      line-height: $font * 0.5;
+    }
+
+ 
 
   }
 }

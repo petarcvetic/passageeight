@@ -1,7 +1,8 @@
 .form-section {
   @extend .container-full;
   background: $white;
-  padding: 250px 0px;
+  padding: 250px 35px;
+  box-sizing: border-box;
 
   .wrap {
     width: 100%;
@@ -11,16 +12,17 @@
 
     .text-wrap {
       h2 {
-        font-size: $font * 0.8;
+        font-size: $font;
         letter-spacing: 1px;
-        line-height: $font * 0.95;
+        line-height: $font * 1.1;
         color: $black;
         font-weight: 600;
-        max-width: 880px;
+        max-width: 1200px;
         margin-top: 0px;
 
         span {
           color: $main_color;
+          font-weight: bold;
         }
       }
 
@@ -50,7 +52,7 @@
 @media only screen and (max-width: 1440px) {
 
   .form-section {
-    padding: 150px 0px;
+    padding: 150px 35px;
 
   }
 }
@@ -60,7 +62,7 @@
 
   .form-section {
 
-    padding: 120px 0px;
+    padding: 120px 35px;
 
     .wrap {
       width: 70%;
@@ -68,13 +70,9 @@
 
       .text-wrap {
 
-        padding: 0 30px;
+       
 
-        h2 {
-          font-size: $font * 0.56;
-          line-height: $font * 0.70;
-
-        }
+        h2 {}
 
       }
     }
@@ -86,7 +84,7 @@
 
   .form-section {
 
-    padding: 90px 0px;
+    padding: 90px 35px;
 
     .wrap {
       width: 100%;
@@ -94,11 +92,31 @@
 
       .text-wrap {
 
-        padding: 0 30px;
+      
+        h2 {}
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+
+
+  .form-section {
+
+    padding: 90px 35px;
+
+    .wrap {
+      width: 100%;
+      margin: 0 auto 0 0;
+
+      .text-wrap {
+
+       
 
         h2 {
-          font-size: $font * 0.40;
-          line-height: $font * 0.50;
+          font-size: $font * 0.8;        
+          line-height: $font;
 
         }
       }
@@ -108,9 +126,9 @@
 
 @media only screen and (max-width: 480px) {
 
-  .form-section {
+.form-section {
 
-    padding: 90px 0px;
+    padding: 90px 35px;
 
     .wrap {
       width: 100%;
@@ -118,14 +136,33 @@
 
       .text-wrap {
 
-        padding: 0 30px;
 
         h2 {
-          font-size: $font * 0.40;
-          line-height: $font * 0.50;
+          font-size: $font * 0.6;        
+          line-height: $font * 0.8; 
 
         }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
 
+.form-section {
+
+  
+    .wrap {
+ 
+
+      .text-wrap {
+
+ 
+
+        h2 {
+          font-size: $font * 0.5;        
+          line-height: $font * 0.7; 
+
+        }
       }
     }
   }
