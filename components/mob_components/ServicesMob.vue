@@ -1,5 +1,5 @@
 <template>
-  <div id="serviceAnime" class="container-full">
+  <div class="container-full services-mob">
     <div class="container">
       <div class="header-box">
         <div class="wrap">
@@ -9,20 +9,14 @@
         <h2 id="servText">OUR SERVICES</h2>
       </div>
     </div>
-    <div id="servicesBox" class="grid">
+    <div id="servicesBox">
       <div class="link-wrap">
-        <div v-for="(service, index) in services" :class="{'active': show.id === index}" @mouseover="textHover(index)">{{service.title}}</div>
-      </div>
-      <transition name="slide-fade">
-        <img :src="require(`@/assets/img/${show.img}`)" :key="show.id" alt="">
-      </transition>
-      <div class="text-area">
-        <div class="head">
-          <h3>{{show.h}}</h3>
-          <span>{{show.num}}<span class="line"></span></span>
-        </div>
-        <div class="body">
-          <p v-html="show.text"></p>
+        <div v-for="(service, index) in services">
+          <h2>{{service.title}}</h2>
+          <div class="icon" :class="{'open': show === index}">
+            <i @click="showCont(index)" class="fas fa-plus"></i>          
+            <p class="service-text" v-if="show === index" v-html="service.text"></p>           
+          </div>
         </div>
       </div>
     </div>
@@ -31,6 +25,7 @@
 <script>
 export default {
   name: 'OurServices',
+  show: false,
 
   data() {
     return {
@@ -41,11 +36,11 @@ export default {
         h: 'SEO',
         num: '01',
         img: 'services-1.jpg',
-        text: `Did you know that Google receives over 63,000 searches per second each day?<br><br>
+        text: `<p>Did you know that Google receives over 63,000 searches per second each day?</p><p>
             Search engine optimization is the best way to make your
             business stand out from your competition. Our SEO experts
             use goal-driven strategies to optimize your website and help 
-            you show up on the first page of Google.`
+            you show up on the first page of Google.</p>`
 
       },
 
@@ -54,88 +49,88 @@ export default {
           h: 'SEO',
           num: '01',
           img: 'services-1.jpg',
-          text: `Did you know that Google receives over 63,000 searches per second each day? <br><br>
+          text: `<p>Did you know that Google receives over 63,000 searches per second each day?</p><p>
             Search engine optimization is the best way to make your
             business stand out from your competition. Our SEO experts
             use goal-driven strategies to optimize your website and help 
-            you show up on the first page of Google.`
+            you show up on the first page of Google.</p>`
         },
         {
           title: 'Web Development',
           h: 'WEB DEV',
           num: '02',
           img: 'services-2.jpg',
-          text: `'Web Developmentw 'Web Developmentceives over 63,000 searches per second each day?<br><br>
+          text: `<p>Web Developmentw 'Web Developmentceives over 63,000 searches per second each day?</p><p>
             Search engine optimization is the best way to make your
             business stand out from your competition. Our SEO experts
             use goal-driven strategies to optimize your website and help 
-            you show up on the first page of Google.`
+            you show up on the first page of Google.</p>`
         },
         {
           title: 'IT Maintenance',
           h: 'IT MAINTENANCE',
           num: '03',
           img: 'services-3.jpg',
-          text: `IT Maintenance thatIT Maintenanceeives over 63,000 searches per second each day?<br><br>
+          text: `<p>IT Maintenance thatIT Maintenanceeives over 63,000 searches per second each day?</p><p>
             Search engine optimization is the best way to make your
             business stand out from your competition. Our SEO experts
             use goal-driven strategies to optimize your website and help 
-            you show up on the first page of Google.`
+            you show up on the first page of Google.</p>`
         },
         {
           title: 'Content Marketing',
           h: 'CONTENT',
           num: '04',
           img: 'services-4.jpg',
-          text: `Content Marketingw Content Marketingreceives over 63,000 searches per second each day? <br><br>
+          text: `<p>Content Marketingw Content Marketingreceives over 63,000 searches per second each day?</p><p>
             Search engine optimization is the best way to make your
             business stand out from your competition. Our SEO experts
             use goal-driven strategies to optimize your website and help 
-            you show up on the first page of Google.`
+            you show up on the first page of Google.</p>`
         },
         {
           title: 'Social Media',
           h: 'SOCIAL MEDIA',
           num: '05',
           img: 'services-5.jpg',
-          text: `Social Media thatSocial Mediaes over 63,000 searches per second each day?<br><br>
+          text: `<p>Social Media thatSocial Mediaes over 63,000 searches per second each day?</p><p>
             Search engine optimization is the best way to make your
             business stand out from your competition. Our SEO experts
             use goal-driven strategies to optimize your website and help 
-            you show up on the first page of Google.`
+            you show up on the first page of Google.</p>`
         },
         {
           title: 'Pay-Per-Click',
           h: 'PPC',
           num: '06',
           img: 'services-6.jpg',
-          text: `Pay-Per-Clicknow Pay-Per-Click receives over 63,000 searches per second each day? <br><br>
+          text: `<p>Pay-Per-Clicknow Pay-Per-Click receives over 63,000 searches per second each day?</p><p>
             Search engine optimization is the best way to make your
             business stand out from your competition. Our SEO experts
             use goal-driven strategies to optimize your website and help 
-            you show up on the first page of Google.`
+            you show up on the first page of Google.</p>`
         },
         {
           title: 'Graphic Design',
           h: 'GRAPHIC DESIGN',
           num: '07',
           img: 'services-7.jpg',
-          text: `Graphic Designhat Graphic Designs over 63,000 searches per second each day? <br><br>
+          text: `<p>Graphic Designhat Graphic Designs over 63,000 searches per second each day?</p><p>
             Search engine optimization is the best way to make your
             business stand out from your competition. Our SEO experts
             use goal-driven strategies to optimize your website and help 
-            you show up on the first page of Google.`
+            you show up on the first page of Google.</p>`
         },
         {
           title: 'White Label',
           h: 'WHITE LABEL',
           num: '08',
           img: 'services-8.jpg',
-          text: `White Label White Label 63,000 searches per second each day? <br><br>
+          text: `<p>White Label White Label 63,000 searches per second each day?</p><p>
             Search engine optimization is the best way to make your
             business stand out from your competition. Our SEO experts
             use goal-driven strategies to optimize your website and help 
-            you show up on the first page of Google.`
+            you show up on the first page of Google.</p>`
         },
 
       ]
@@ -143,20 +138,22 @@ export default {
     }
   },
   methods: {
-    textHover(i) {
-      this.show.id = i;
-      this.show.num = this.services[i].num;
-      this.show.img = this.services[i].img;
-      this.show.h = this.services[i].h;
-      this.show.text = this.services[i].text;
+    showCont(index) {
+
+      if (this.show === false || this.show != index) {
+        this.show = index;
+      } else {
+        this.show = false;
+      }
+
     },
     isInViewport(elem) {
-     
+
       var bounding = elem.getBoundingClientRect();
       return (
         bounding.top >= 0 &&
         bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) 
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
       );
 
     }
@@ -164,22 +161,7 @@ export default {
   },
   mounted() {
 
-  if(window.innerWidth > 721){
-    let h2 = document.getElementById('servText');
-   
-
-    window.addEventListener('scroll', () => {
-      let lm = this;
-      if (lm.isInViewport(h2)) { 
-
-      console.log('adas');       
-            h2.classList.add('our-services-anime')
-               
-      } 
-    });
-
   }
-}
 
 };
 

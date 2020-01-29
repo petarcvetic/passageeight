@@ -2,6 +2,26 @@
   @extend .container-full;
   background: $black-bg;
   padding-top: 40px;
+  position: relative;
+
+  #backToTop {
+    @extend .flex-center;
+    align-items: center;
+    background: $main_color;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;   
+    cursor: pointer; 
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 35px;
+    transform: translateY(-50%);
+
+    img{
+      height: 45px;
+    }
+  }
 
   .wrap {
     @extend .container;
@@ -11,7 +31,7 @@
       grid-column-gap: 100px;
       grid-row-gap: 40px;
       box-sizing: border-box;
-      padding: 0 30px;
+      padding: 0 35px;
 
       .col {
         grid-column: span 3;
@@ -174,86 +194,76 @@
 
       .grid {
         grid-column-gap: 30px;
+        grid-row-gap: 10px;
 
-
-        #col-1 {
-
-          padding-right: 20px;
-
-        }
-
-        #col-2,
-        #col-3 {
-          grid-column: span 6;
-
-        }
-
-        #col-5 {
-          grid-column: span 12;
-
-        }
-      }
-    }
-  }
-
-}
-
-@media only screen and (max-width: 480px) {
-
-  .footer {
-
-    h3 {
-      margin: 25px 0 0 0;
-    }
-
-    .wrap {
-
-      .grid {
-        grid-column-gap: 30px;
-        grid-row-gap: 0px;
 
         .col {
-          grid-column: span 6;
+          grid-column: span 12;
+          align-items: center;
+          text-align: center;
+          padding: 0px;
+
+          .wrap {
+            align-items: center;
+          }
+
+          h3 {
+            font-size: $font * 0.23;
+            line-height: $font * 0.23;
+
+          }
+
+          p {
+            font-size: $font * 0.18;
+            line-height: $font * 0.30;
+
+          }
+
+          ul {
+            li {
+              font-size: $font * 0.22;
+              padding: 10px 0;
+
+              a {
+                color: $white;
+                text-decoration: none;
+              }
+            }
+          }
         }
 
         #col-1 {
-
-          padding-right: 20px;
-
+          padding-right: 0px;
         }
 
-        #col-2,
-        #col-3 {
-          grid-column: span 6;
 
+        #col-0 {
+          h2 {
+            font-size: $font * 0.6;
+            line-height: $font * 0.75;
+            color: $white;
+          }
+
+          p {
+            font-size: $font * 0.22;
+            line-height: $font * 0.30;
+          }
         }
 
         #col-4 {
-          h3 {
-            margin: 25px 0;
-          }
-        }
-
-        #col-5 {
-          grid-column: span 12;
-          padding-bottom: 15px;
+          grid-row: 3;
 
           a {
-            font-size: $font * 0.18;
-          }
-
-        }
-
-        .social-wrap {
-          i {
-
-            margin: 20px 15px;
-
+            padding: 6px 0;
           }
         }
+
       }
     }
   }
 
-
 }
+
+@media only screen and (max-width: 480px) {}
+
+ 

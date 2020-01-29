@@ -35,7 +35,7 @@ export default {
       x = e.clientX;
       y = e.clientY     
      
-     let xStrech = Math.round((x/ width * strechX) - (strechX  / 20));
+     let xStrech = Math.round((x/ width * strech) - (strech  / 20));
      let yStrech = Math.round((y/ height * strech) - (strech  / 2));
 
 
