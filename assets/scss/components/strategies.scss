@@ -70,7 +70,7 @@
       background-image: url('~assets/img/services-8.jpg');
       background-size: cover;
       align-items: center;
-      height: 100%;
+      height: auto;
       max-height: 1000px;
 
       img {
@@ -97,13 +97,30 @@
 
     .video-wrap {
       grid-column: 7 / -1;
+      .wrap{
+        width: 100%;
+      }
 
     }
 
   }
 }
 
-@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 1124px) {
+  .strategies {
+    .text-wrap {
+      padding: 0 0 0 30px;
+
+      h2 {
+          font-size: 40px;
+          line-height: 58px;
+      }
+      p{
+        line-height: 30px;
+      }
+    }
+  } 
+}
 
 @media only screen and (max-width: 960px) {
 
@@ -112,9 +129,55 @@
     height: 600px;
 
     .text-wrap {
-      padding: 0 30px;
-
+      h2 {
+          font-size: 30px;
+          line-height: 44px;
+      }
     }
 
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+
+.strategies {
+  padding: 50px 0;
+  column-gap: 9%;
+
+  .text-wrap {
+    grid-column: span 7;
+    .wrap{
+
+      h2{
+        font-size: 26px;
+        line-height: 40px;
+      }
+      p{
+        line-height: 28px;
+      }
+      .link-wrap{
+        height: 65px;
+        box-shadow: 5px 5px 20px #ccc;
+        border: none;
+        border-top: none;
+        outline: none;
+        box-sizing: border-box;
+        padding: 5px 30px;
+        margin-top: 15px;
+      }
+    }
+  }
+  .video-wrap {
+      grid-column: span 5;
+      wrap{
+        height: auto;
+
+        img{
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
   }
 }
