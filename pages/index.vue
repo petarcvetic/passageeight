@@ -21,7 +21,11 @@
       </div>
       <div class="video-wrap">
         <div class="wrap">
-          <img src="@/assets/img/osmica.png" alt="">
+          <img srcset="@/assets/img/osmica.png 1900w,
+                       @/assets/img/osmica-720.png 720w"
+               sizes="(min-width: 720px) 1900w,
+                      (max-width: 720px) 720w"
+               src="@/assets/img/osmica.png" alt="osmica">
         </div>
       </div>
     </div>   
