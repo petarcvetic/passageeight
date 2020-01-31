@@ -1,9 +1,9 @@
-/*body {
+body {
   overflow: hidden;
   animation: overflow 0.1s ease forwards 5s;
 
 }
-*/
+
 .loading-page {
  
 }
@@ -23,6 +23,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 80%;
+
 
     path:nth-child(2) {
       stroke-dasharray: 449px;
