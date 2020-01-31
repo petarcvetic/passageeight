@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="" v-if="!isLoading">
+    <div class="" v-if="isLoading">
       <svg-vue />
     </div>
     <div class="services">

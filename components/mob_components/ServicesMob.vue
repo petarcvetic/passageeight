@@ -14,8 +14,10 @@
         <div v-for="(service, index) in services">
           <h2>{{service.title}}</h2>
           <div class="icon" :class="{'open': show === index}">
-            <i @click="showCont(index)" class="fas fa-plus"></i>          
-            <p class="service-text" v-if="show === index" v-html="service.text"></p>           
+            <i @click="showCont(index)" class="fas fa-plus"></i>     
+            <transition name="fade-text">     
+              <p class="service-text" :key="index" v-if="show === index" v-html="service.text"></p>
+            </transition>           
           </div>
         </div>
       </div>

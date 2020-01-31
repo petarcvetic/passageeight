@@ -58,8 +58,7 @@
         filter: drop-shadow(0px -2px 9px rgba(0, 0, 0, 0.2));
       }*/
       h2 {
-
-        font-size: $font * 2.19;
+        font-size: $font * 1.8;
         letter-spacing: 1px;
         line-height: $font * 1.49;
         color: #ffffff;
@@ -67,11 +66,10 @@
         font-weight: 800;
         filter: drop-shadow(0px -2px 9px rgba(0, 0, 0, 0.2));
         position: absolute;
-        min-width: 1572px;
+        min-width: 1303px;
         bottom: -122px;
         margin: 0 auto;
         transition: 1s;
-
       }
 
       .our-services-anime {
@@ -226,6 +224,7 @@
   }
 }
 
+
 @media only screen and (max-width: 1840px) {
 
 
@@ -282,9 +281,8 @@
         left: 35px;
 
         h2 {
-
+          min-width: 1080px;
           font-size: $font * 1.5;
-
         }
       }
     }
@@ -339,38 +337,28 @@
 
 
         h2 {
-
           font-size: $font * 1.2;
           line-height: $font * 1.49;
-
-
+          min-width: 868px;
         }
       }
     }
 
     .grid {
-
-
-
       .link-wrap {
+        div {
 
-
-        div {}
+        }
       }
-
 
       .text-area {
 
         .head {
 
-
-
           span {}
         }
 
-
       }
-
     }
   }
 }
@@ -418,9 +406,8 @@
 
 
         h2 {
-
           font-size: $font;
-
+          min-width:725px;
         }
       }
     }
@@ -474,7 +461,7 @@
 
         h2 {
           font-size: $font * 0.8;
-
+          min-width:585px;
         }
       }
     }
@@ -512,9 +499,9 @@
   .services {
 
     .services-mob {
-      background-image: url('~assets/img/vektor-50.svg');
+      background-image: url('~assets/img/vektor-black.svg');
       background-size: cover;
-      background-color: $black;
+      background-color: $black-bg;
 
       .header-box {
 
@@ -525,8 +512,7 @@
           line-height: $font * 0.4;
           bottom: 20px;
           left: 30px;
-
-
+          min-width: unset;
         }
       }
     }
@@ -557,8 +543,7 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            transition: 0.2s;
-            overflow: hidden;
+            transition: 0.4s;
 
             &:hover {
               transform: rotate(45deg);
@@ -783,4 +768,51 @@
 
     }
   }
+}
+
+@media only screen and (max-height: 500px) {
+  .services {
+    .container {
+      .header-box {
+        h2 {
+          font-size: $font * 1.8;
+          line-height: $font * 1.49;
+        }
+      }
+    }
+    .grid {
+      .link-wrap {
+        padding: 0px 0 0 35px;
+        height: 170px;
+        div {
+          font-size: 14px;
+          margin-right: 15px;
+          line-height: 30px;
+          margin-bottom: 10px;
+        }
+      }
+      .text-area {
+        height: 350px;
+        .head {
+          h3{
+            font-size: 20px;
+          }
+          span {
+            font-size: 20px;
+            line-height: 30px;
+            .line{
+              width: 24px;
+            }
+          }
+        }
+        .body{
+          padding: 10px 20px 20px 20px;
+          p{
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }  
 }
