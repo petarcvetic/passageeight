@@ -1,11 +1,12 @@
 <template>
   <div>
-    <div class="" v-if="isLoading">
+    <ps-header />
+    <!-- <div class="" v-if="isLoading">
       <svg-vue />
-    </div>
+    </div>-->
     <div class="services">
-      <our-services  v-if="winWidth > 720"/>
-      <services-mob v-else/>
+      <our-services v-if="winWidth > 720" />
+      <services-mob v-else />
     </div>
     <div class="strategies">
       <div class="text-wrap">
@@ -22,19 +23,16 @@
       <div class="video-wrap">
         <div class="wrap">
           <img srcset="@/assets/img/osmica.png 1900w,
-                       @/assets/img/osmica-720.png 720w"
-               sizes="(min-width: 720px) 1900w,
-                      (max-width: 720px) 720w"
-               src="@/assets/img/osmica.png" alt="osmica">
+                       @/assets/img/osmica-720.png 720w" sizes="(min-width: 720px) 1900w,
+                      (max-width: 720px) 720w" src="@/assets/img/osmica.png" alt="osmica">
         </div>
       </div>
-    </div>   
+    </div>
     <how-mob v-if="winWidth < 721" />
     <client-only>
       <video-vue />
     </client-only>
     <why-vue />
-    
     <shadow-vue v-if="winWidth > 720" />
     <shadow-mob v-else />
     <contact-form />
@@ -51,6 +49,7 @@ import ShadowVue from '../components/Shadow.vue';
 import ShadowMob from '../components/mob_components/ShadowMob.vue';
 import ContactForm from '../components/ContactForm.vue';
 import SvgVue from '../components/Svg.vue';
+import PsHeader from '../components/PsHeader.vue';
 import { mapState } from 'vuex';
 
 export default {
@@ -64,6 +63,7 @@ export default {
     ShadowVue,
     ShadowMob,
     ContactForm,
+    PsHeader,
     SvgVue
 
   },

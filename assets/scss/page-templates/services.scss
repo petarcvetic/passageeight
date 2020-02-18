@@ -1,0 +1,39 @@
+.header.services-template {
+  @extend .flex-center;
+  background-color: $black-bg;
+  height: 700px;
+
+  h1 {
+    font-size: $font*1.5;
+  }
+}
+
+.sekcija1 {
+  @extend .flex-between;
+  align-items: center;
+  padding: 140px 100px;
+
+  .services-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .text-wrap {
+    max-width: 500px;
+
+    h2{
+    	margin: 0;
+    }
+  }
+
+  .border-red {
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: $main_color;
+  }
+
+  .link-contact-wrap{
+  	margin: 50px 0 0 0;
+  }
+}
