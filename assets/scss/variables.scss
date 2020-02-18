@@ -345,3 +345,37 @@ $mb-60: 60px;
 
 
 }
+
+.link-contact-wrap {
+  @extend .flex-between;
+  align-items: center;
+  color: $main_color;
+  margin: 40px auto;
+  height: auto;
+  box-shadow: 5px 5px 20px #ccc;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  padding: 5px 60px 5px 30px;
+  cursor: pointer;
+  transition: 0.4s;
+
+   &:hover{
+    padding: 5px 30px 5px 30px;
+   }
+
+
+  p{
+    line-height: 0px;
+  }
+}
+
+//////SIZES
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 46%;
+}
