@@ -1,17 +1,29 @@
-.header.services-template {
-  @extend .flex-center;
-  background-color: $black-bg;
-  height: 700px;
+.services-template {
+  .header {
+    @extend .flex-center;
+    background-color: $black-bg;
+    height: 700px;
 
-  h1 {
-    font-size: $font*1.5;
+    h1 {
+      font-size: $font*1.5;
+    }
+  }
+
+  .border-red {
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: $main_color;
+    margin: 65px 0;
   }
 }
 
 .sekcija1 {
   @extend .flex-between;
+  @extend .container;
   align-items: center;
-  padding: 140px 100px;
+  padding: 140px 30px;
+  margin: 0 auto;
 
   .services-img {
     width: 100%;
@@ -21,19 +33,133 @@
   .text-wrap {
     max-width: 500px;
 
-    h2{
-    	margin: 0;
+    h2,
+    p {
+      margin: 0;
     }
   }
 
-  .border-red {
-    display: block;
-    width: 100px;
-    height: 5px;
-    background: $main_color;
+
+
+  .link-contact-wrap {
+    margin: 60px 0 0 0;
+  }
+}
+
+.description-section {
+  @extend .container-full;
+  padding: 70px 30px;
+  background: $black-bg;
+
+  .container {
+    max-width: 1200px;
   }
 
-  .link-contact-wrap{
-  	margin: 50px 0 0 0;
+  h2,
+  h3,
+  p,
+  li {
+    color: $white;
+  }
+
+  h2,
+  h3,
+  p {
+    max-width: 850px;
+  }
+
+  h3 {
+    font-size: $font * 0.40;
+    margin: 70px 0;
+
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+
+    p {
+      max-width: unset;
+      margin: 0px;
+    }
+
+    .list-style-line {
+      margin: 20px 20px 20px 0px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .services-template {
+
+    .border-red {
+      margin: 40px 0;
+    }
+  }
+
+  .sekcija1 {
+    padding: 100px 60px;
+
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  .sekcija1 {
+    padding: 100px 30px;
+
+    .w-50 {
+      display: flex;
+      width: 100%;
+    }
+
+    .services-img {
+      max-width: 500px;
+      margin: 0 auto 40px auto;
+    }
+
+    .text-wrap {
+      max-width: unset;
+
+
+    }
+
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .services-template {
+    .header {
+      height: 500px;
+
+
+      .w-100 {
+        height: 0px;
+      }
+
+      h1 {
+        font-size: $font;
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .description-section {
+
+    h3 {
+      font-size: $font * 0.30;
+      margin: 40px 0;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 360px) {
+  .sekcija1 {
+    .link-contact-wrap {
+      padding: 5px 20px 5px 20px;
+    }
   }
 }

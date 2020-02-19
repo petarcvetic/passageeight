@@ -1,0 +1,18 @@
+.slider-section{
+  @extend .container;  
+  margin: 0 auto;
+  padding: 70px 30px;
+
+  .text-wrap{
+  	@extend .flex-center;
+
+  	p{
+  		text-align: center;
+  	}
+
+  	.text-bold{
+  		color: $grey;
+  		margin: 50px 0;
+  	}
+  }
+}

@@ -247,7 +247,9 @@ $mb-60: 60px;
 .text-red {
   color: $main_color;
 }
-
+.text-bold{
+  font-weight: bold;
+}
 //flex
 
 .flex-center {
@@ -360,14 +362,16 @@ $mb-60: 60px;
   cursor: pointer;
   transition: 0.4s;
 
-   &:hover{
+  &:hover {
     padding: 5px 30px 5px 30px;
-   }
-
-
-  p{
-    line-height: 0px;
   }
+}
+
+.list-style-line{
+  height: 3px;
+  width: 25px;
+  margin-right: 30px;
+  background: $main_color; 
 }
 
 //////SIZES

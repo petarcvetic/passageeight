@@ -1,6 +1,5 @@
 <template>
   <div class="w-100">
- 
     <div v-if="winWidth > 720" class="nav">
       <ul>
         <li>
@@ -9,8 +8,34 @@
         <li>
           <nuxt-link to='/about'>ABOUT</nuxt-link>
         </li>
-        <li>
-          <nuxt-link to='/services'>SERVICES</nuxt-link>
+        <li class="sub-menu-wrap">
+          <nuxt-link to='/services'>SERVICES</nuxt-link><i class="fas fa-chevron-down"></i>
+          <ul class="sub-menu">
+            <li>
+              <nuxt-link to='/services/seo'>SEO</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to='/services/se'>DEVELOPMENT</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to='/services/se'>MAINTENANCE</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to='/services/se'>CONTENT</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to='/services/se'>SOCIAL MEDIA</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to='/services/se'>PPC</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to='/services/se'>DESIGN</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to='/services/so'>WHITE LABEL</nuxt-link>
+            </li>
+          </ul>
         </li>
         <li>
           <nuxt-link to='/projects'>PROJECTS</nuxt-link>
@@ -43,11 +68,10 @@
           <li>
             <nuxt-link to='/contact'>CONTACT</nuxt-link>
           </li>
-           <p>LET'S TALK</p>
+          <p>LET'S TALK</p>
         </ul>
       </div>
     </div>
-   
   </div>
 </template>
 <script>
@@ -64,9 +88,9 @@ export default {
       winWidth: 'winWidth'
     })
   },
-  mounted() {    
-   this.$store.commit('SET_WIDTH', window.innerWidth);
-}
+  mounted() {
+    this.$store.commit('SET_WIDTH', window.innerWidth);
+  }
 
 };
 
