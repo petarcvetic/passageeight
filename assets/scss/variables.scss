@@ -316,12 +316,10 @@ $mb-60: 60px;
 
 /////buttons
 
-.white-btn {
-  @extend .flex-between;
+.btn{
   align-items: center;
   margin-top: 40px;
   height: auto;
-  box-shadow: 5px 5px 20px #ccc;
   border: none;
   outline: none;
   box-sizing: border-box;
@@ -336,16 +334,39 @@ $mb-60: 60px;
   }
 
   p {
-    color: $main_color;
     font-weight: bold;
   }
 
   img {
-    height: 24px;
     transition: 0.4s;
   }
+}
 
+.white-btn {
+  @extend .flex-between;
+  @extend .btn;
+  box-shadow: 5px 5px 20px #ccc;
+  p {
+    color: $main_color;
+  }
+  img {
+    height: 24px;
+  }
+}
 
+.red-btn{
+  @extend .flex-between;
+  @extend .btn;
+  margin: 40px auto;
+  background: $main_color;
+  max-width: 450px;
+  p {
+    color: $white;
+    margin: 2px 0;
+  }
+  img {
+    height: 15px;
+  }
 }
 
 .link-contact-wrap {

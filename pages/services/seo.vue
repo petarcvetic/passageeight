@@ -71,16 +71,19 @@
 	      <p class="text-bold">Aliquam erat volutpat. Donec lacinia aliquet pellentesque. Proin quis tortor tempor, luctus nulla vitae, dictum nulla. Integer nec egestas dolor. Ut sit amet rhoncus ante, malesuada commodo nulla. Maecenas eget nisi erat. Donec gravida, tellus id sagittis maximus, sapien mi ultricies nisi, id congue sem diam id neque. Praesent iaculis ante in nulla venenatis imperdiet.</p>
 	   </div>      
     </div>
+    <service-quote />
   </div>
 </template>
 <script>
 import MainNav from '../../components/MainNav.vue';
 import ServiceSlider from '../../components/services/ServiceSlider.vue';
+import ServiceQuote from '../../components/services/ServiceQuote.vue';
 import { mapState } from 'vuex';
 export default {
   components: {
     MainNav,
-    ServiceSlider
+    ServiceSlider,
+    ServiceQuote
   },
 
   data() {

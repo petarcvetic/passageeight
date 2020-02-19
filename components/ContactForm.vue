@@ -5,10 +5,10 @@
         <h2>Ready to see<br>
           what our <span>experts</span> can do
           for your <span>business</span>?</h2>
-        <div class="white-btn">
-          <p>CONTACT US</p>
-          <img src="@/assets/img/arrow-red.png" alt="">
-        </div>
+      </div>
+      <div class="white-btn">
+        <p>CONTACT US</p>
+        <img src="@/assets/img/arrow-red.png" alt="">
       </div>
     </div>
   </div>
