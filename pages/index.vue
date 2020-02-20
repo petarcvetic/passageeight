@@ -6,7 +6,18 @@
     </div>-->
     <div class="services">
       <our-services v-if="winWidth > 720" />
-      <services-mob v-else />
+      <div v-else class="container-full services-mob">
+        <div class="container">
+          <div class="header-box">
+            <div class="wrap">
+              <p><a href="#servicesBox">LEARN MORE</a></p>
+              <img src="@/assets/img/arrow-right.png" alt="">
+            </div>
+            <h2 id="servText">OUR SERVICES</h2>
+          </div>
+        </div>
+        <services-mob />
+      </div>
     </div>
     <div class="strategies">
       <div class="text-wrap">

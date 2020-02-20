@@ -63,13 +63,13 @@
       <h2>Lorem ipsum
         dolor sit amet.
       </h2>
-      <service-slider />
-
-	   <div class="text-wrap">
-	      <div class="border-red"></div>
-	      <p >Aliquam erat volutpat. Donec lacinia aliquet pellentesque. Proin quis tortor tempor, luctus nulla vitae, dictum nulla. Integer nec egestas dolor. Ut sit amet rhoncus ante, malesuada commodo nulla. Maecenas eget nisi erat. Donec gravida, tellus id sagittis maximus, sapien mi ultricies nisi, id congue sem diam id neque. Praesent iaculis ante in nulla venenatis imperdiet.</p>
-	      <p class="text-bold">Aliquam erat volutpat. Donec lacinia aliquet pellentesque. Proin quis tortor tempor, luctus nulla vitae, dictum nulla. Integer nec egestas dolor. Ut sit amet rhoncus ante, malesuada commodo nulla. Maecenas eget nisi erat. Donec gravida, tellus id sagittis maximus, sapien mi ultricies nisi, id congue sem diam id neque. Praesent iaculis ante in nulla venenatis imperdiet.</p>
-	   </div>      
+      <service-slider v-if="winWidth > 850" />
+      <services-mob v-else />
+      <div class="text-wrap">
+        <div class="border-red"></div>
+        <p>Aliquam erat volutpat. Donec lacinia aliquet pellentesque. Proin quis tortor tempor, luctus nulla vitae, dictum nulla. Integer nec egestas dolor. Ut sit amet rhoncus ante, malesuada commodo nulla. Maecenas eget nisi erat. Donec gravida, tellus id sagittis maximus, sapien mi ultricies nisi, id congue sem diam id neque. Praesent iaculis ante in nulla venenatis imperdiet.</p>
+        <p class="text-bold">Aliquam erat volutpat. Donec lacinia aliquet pellentesque. Proin quis tortor tempor, luctus nulla vitae, dictum nulla. Integer nec egestas dolor. Ut sit amet rhoncus ante, malesuada commodo nulla. Maecenas eget nisi erat. Donec gravida, tellus id sagittis maximus, sapien mi ultricies nisi, id congue sem diam id neque. Praesent iaculis ante in nulla venenatis imperdiet.</p>
+      </div>
     </div>
     <service-quote />
   </div>
@@ -78,12 +78,14 @@
 import MainNav from '../../components/MainNav.vue';
 import ServiceSlider from '../../components/services/ServiceSlider.vue';
 import ServiceQuote from '../../components/services/ServiceQuote.vue';
+import ServicesMob from '../../components/mob_components/ServicesMob.vue';
 import { mapState } from 'vuex';
 export default {
   components: {
     MainNav,
     ServiceSlider,
-    ServiceQuote
+    ServiceQuote,
+    ServicesMob,
   },
 
   data() {
@@ -92,7 +94,9 @@ export default {
     }
   },
   computed: {
-
+    ...mapState({
+      winWidth: 'winWidth'
+    })
   },
   mounted() {
 
