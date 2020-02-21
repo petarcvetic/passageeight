@@ -2,10 +2,19 @@
   .header {
     @extend .flex-center;
     background-color: $black-bg;
-    height: 700px;
+    height: 0;
+    padding-bottom: 39%;
+    position: relative;
+    
+    .title-wrap{
+      @extend .flex-center;
+      position: absolute;
+      height: 100%;
+      align-items:center;
 
-    h1 {
-      font-size: $font*1.5;
+      h1 {
+        font-size: $font*1.5;
+      }
     }
   }
 
@@ -100,6 +109,14 @@
   .sekcija1 {
     padding: 100px 60px;
 
+  }
+  .header {
+    padding-bottom: 50%; 
+    .title-wrap{
+      h1 {
+        font-size: $font;
+      }
+    }
   }
 }
 
