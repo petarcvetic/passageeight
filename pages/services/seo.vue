@@ -2,7 +2,7 @@
   <div class="services-template">
     <div class="header">
       <main-nav />
-      <div class="wrap">
+      <div class="wrap title-wrap">
         <div class="text-wrap">
           <h1 id="title">Seo<span class="text-red">.</span></h1>
         </div>
