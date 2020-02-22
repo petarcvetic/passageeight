@@ -1,53 +1,74 @@
-
-
-@media only screen and (max-width: 1200px) {
   .slider-section {
+    @extend .container;
+    padding: 100px 30px;
+
     .service-slider {
+      @extend .flex-center;
+      box-shadow: 5px 5px 20px #ccc;
+      margin: 130px 0;
+    }
+
+    .width-50 {
+      width: 50%;
+      height: 700px;
+      overflow: hidden;
+
+      .text-area {
+        @extend .flex-center;
+        align-items: center;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 30px 60px;
+      }
+
+
       .head {
+        @extend .flex-between;
+        align-items: center;
+        width: 100%;
+
         h2 {
-          font-size: 36px;
+          font-size: 40px;
         }
 
         span {
-          font-size: 80px;
+          color: $main_color;
+          font-size: $font;
+
         }
       }
 
       .body {
         p {
-          font-size: 18px;
+
+          box-sizing: border-box;
+          padding: 0 20px;
         }
       }
 
-      .text-area {
-        padding: 30px;
-      }
-    }
+      .s-footer {
+        @extend .flex-end;
+        width: 100%;
 
-  }
+        .link-contact-wrap {
+          @extend .flex-center;
+          align-items: center;
+          margin: 0;
+          height: 60px;
+          width: 80px;
+          padding: 0;
 
-}
+          img {
+            transition: 0.4s;
+          }
 
-@media only screen and (max-width: 1050px) {
+          &:hover img {
+            margin-left: 20px;
 
-  .slider-section {
-    .service-slider {
-      position: relative;
-      height: 650px;
-
-      .text-area {
-        position: absolute;
-        width: 80%;
-        height: 80%;
-        left: 0;
-        background: $white;
-        z-index: 9999;
+          }
+        }
       }
 
-
-      .width-50 {
-        width: 0;
-      }
 
       .image-wrap {
         width: 100%;
@@ -58,50 +79,135 @@
         height: 100%;
       }
     }
-  }
 
-}
+    .text-wrap {
+      @extend .flex-center;
 
-@media only screen and (max-width: 850px) {
-
-  .slider-section {
-    h2 {
-      text-align: center;
-      color: $dark_pink;
-    }
-  }
-
-}
-
-@media only screen and (max-width: 560px) {
-  .slider-section {
-    #servicesBox {
-      .service-text {
-        p {
-          font-size: 16px;
-          line-height: 30px;
-        }
+      p {
+        text-align: center;
       }
     }
   }
-}
 
-@media only screen and (max-width: 360px) {
-  .slider-section {
-    #servicesBox {
+  @media only screen and (max-width: 1200px) {
+    .slider-section {
+      .service-slider {
+        .head {
+          h2 {
+            font-size: 36px;
+          }
 
-      .link-wrap {
-        div {
-          .open {
-            i {
-              top: 5px;
-              right: 10px;
-              font-size: 28px;
-            }
+          span {
+            font-size: 80px;
+          }
+        }
 
+        .body {
+          p {
+            font-size: 18px;
+          }
+        }
+
+        .text-area {
+          padding: 30px;
+        }
+      }
+
+    }
+
+  }
+
+  @media only screen and (max-width: 1050px) {
+
+    .slider-section {
+      .service-slider {
+        position: relative;
+        height: 650px;
+
+        .text-area {
+          position: absolute;
+          width: 80%;
+          height: 80%;
+          left: 0;
+          background: $white;
+          z-index: 9999;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+
+        .width-50 {
+          width: 0;
+        }
+
+        .image-wrap {
+          width: 100%;
+        }
+
+        .slider-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+  }
+
+  @media only screen and (max-width: 850px) {
+
+    .slider-section {
+      h2 {
+        text-align: center;
+      }
+
+      #servicesBoxMob {
+        padding: 0;
+
+        h2 {
+          font-size: 36px;
+          color: $dark_pink;
+        }
+      }
+    }
+
+  }
+
+  @media only screen and (max-width: 560px) {
+    .slider-section {
+      #servicesBoxMob {
+        .service-text {
+          p {
+            font-size: 16px;
+            line-height: 30px;
           }
         }
       }
     }
   }
-}
+
+  @media only screen and (max-width: 360px) {
+    .slider-section {
+      padding: 70px 30px;
+
+      #servicesBoxMob {
+
+        h2 {
+          font-size: 30px;
+          color: $dark_pink;
+        }
+
+        .link-wrap {
+          div {
+            .open {
+              i {
+                top: 5px;
+                right: 10px;
+                font-size: 28px;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
