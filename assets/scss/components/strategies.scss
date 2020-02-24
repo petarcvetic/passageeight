@@ -90,14 +90,12 @@
 
   .strategies {
 
-    .text-wrap {
-     
-
-    }
+    .text-wrap {}
 
     .video-wrap {
       grid-column: 7 / -1;
-      .wrap{
+
+      .wrap {
         width: 100%;
       }
 
@@ -112,14 +110,15 @@
       padding: 0 0 0 30px;
 
       h2 {
-          font-size: 40px;
-          line-height: 58px;
+        font-size: 40px;
+        line-height: 58px;
       }
-      p{
+
+      p {
         line-height: 30px;
       }
     }
-  } 
+  }
 }
 
 @media only screen and (max-width: 960px) {
@@ -130,8 +129,8 @@
 
     .text-wrap {
       h2 {
-          font-size: 30px;
-          line-height: 44px;
+        font-size: 30px;
+        line-height: 44px;
       }
     }
 
@@ -141,43 +140,88 @@
 @media only screen and (max-width: 768px) {
 
 
-.strategies {
-  padding: 50px 0;
-  column-gap: 9%;
+  .strategies {
+    padding: 50px 0;
+    column-gap: 9%;
 
-  .text-wrap {
-    grid-column: span 7;
-    .wrap{
+    .text-wrap {
+      grid-column: span 7;
 
-      h2{
-        font-size: 26px;
-        line-height: 40px;
-      }
-      p{
-        line-height: 28px;
-      }
-      .link-wrap{
-        height: 65px;
-        box-shadow: 5px 5px 20px #ccc;
-        border: none;
-        border-top: none;
-        outline: none;
-        box-sizing: border-box;
-        padding: 5px 30px;
-        margin-top: 15px;
+      .wrap {
+
+        h2 {
+          font-size: 26px;
+          line-height: 40px;
+        }
+
+        p {
+          line-height: 28px;
+        }
+
+        .link-wrap {
+          height: 65px;
+          box-shadow: 5px 5px 20px #ccc;
+          border: none;
+          border-top: none;
+          outline: none;
+          box-sizing: border-box;
+          padding: 5px 30px;
+          margin-top: 15px;
+        }
       }
     }
-  }
-  .video-wrap {
+
+    .video-wrap {
       grid-column: span 5;
-      wrap{
+
+      wrap {
         height: auto;
 
-        img{
+        img {
           max-width: 100%;
           height: auto;
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .strategies {
+    padding: 50px 0;
+    column-gap: 9%;
+
+    .text-wrap {
+      grid-column: span 7;
+
+      .wrap {
+
+        h2 {
+          font-size: 26px;
+          line-height: 40px;
+        }
+
+        p {
+          line-height: 28px;
+        }
+
+        .link-wrap {
+          height: 65px;
+          box-shadow: 5px 5px 20px #ccc;
+          border: none;
+          border-top: none;
+          outline: none;
+          box-sizing: border-box;
+          padding: 5px 10px;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .strategies {
+    margin-bottom: 100px;
   }
 }

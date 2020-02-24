@@ -87,6 +87,8 @@
   .grid {
     grid-template-rows: 150px auto 80px;
     padding-top: 300px;
+    overflow: hidden;
+
 
 
     img {
@@ -635,49 +637,49 @@
 
 
   .services {
-    .services-mob {
-      .container {
-        .header-box {
-          width: 310px;
+
+    .container {
+      .header-box {
+        width: 310px;
 
 
-          h2 {
-            font-size: $font * 0.3;
+        h2 {
+          font-size: $font * 0.3;
 
-          }
         }
-      }
-
-      #servicesBoxMob {
-        padding: 250px 35px 80px 35px;
-
-        .link-wrap {
-
-          h2 {
-            font-size: $font * 0.25;
-
-          }
-
-          div {
-
-            .open {
-
-              .service-text {
-
-
-
-                p {
-                  font-size: $font* 0.16;
-                  line-height: $font* 0.30;
-                }
-              }
-
-            }
-          }
-        }
-
       }
     }
+
+    #servicesBoxMob {
+      padding: 250px 35px 80px 35px;
+
+      .link-wrap {
+
+        h2 {
+          font-size: $font * 0.25;
+
+        }
+
+        div {
+
+          .open {
+
+            .service-text {
+
+
+
+              p {
+                font-size: $font* 0.16;
+                line-height: $font* 0.30;
+              }
+            }
+
+          }
+        }
+      }
+
+    }
+
   }
 }
 

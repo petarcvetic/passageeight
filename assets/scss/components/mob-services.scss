@@ -102,7 +102,7 @@
     }
 
     @media only screen and (max-width: 720px) {
-      .services{
+      .services {
         .services-mob {
 
 
@@ -119,40 +119,40 @@
             }
           }
         }
-     }
+      }
     }
 
     @media only screen and (max-width: 560px) {
 
 
-        #servicesBoxMob {
+      #servicesBoxMob {
 
-          .link-wrap {
+        .link-wrap {
 
-            div {
+          div {
 
-              .open {
+            .open {
 
-                .service-text {
+              .service-text {
 
 
-                  p {
-                    font-size: $font* 0.16;
-                    line-height: $font* 0.30;
-                  }
+                p {
+                  font-size: $font* 0.16;
+                  line-height: $font* 0.30;
                 }
-
               }
+
             }
           }
-
         }
-    
+
+      }
+
     }
 
     @media only screen and (max-width: 480px) {
 
-
+      .services {
         .container {
           .header-box {
             width: 310px;
@@ -194,14 +194,15 @@
           }
 
         }
-   
+      }
+
     }
 
 
     @media only screen and (max-width: 360px) {
 
 
-   
+      .services {
 
         .container {
           .header-box {
@@ -238,13 +239,13 @@
           }
 
         }
-    
+      }
     }
 
     @media only screen and (max-width: 320px) {
 
 
-   
+      .services {
 
         .container {
           .header-box {
@@ -283,11 +284,12 @@
           }
 
         }
-    
+      }
+
     }
 
     @media only screen and (max-height: 500px) {
-     
+      .services {
         .container {
           .header-box {
             h2 {
@@ -338,5 +340,5 @@
             }
           }
         }
-   
+      }
     }
