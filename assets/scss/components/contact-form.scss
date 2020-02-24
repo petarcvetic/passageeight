@@ -65,14 +65,17 @@
     padding: 120px 35px;
 
     .wrap {
-      width: 70%;
+      width: 100%;
       margin: 0 auto 0 0;
 
       .text-wrap {
 
        
 
-        h2 {}
+        h2 {
+          font-size: $font * 0.85;
+          line-height: $font;
+        }
 
       }
     }
@@ -138,31 +141,21 @@
 
 
         h2 {
-          font-size: $font * 0.6;        
-          line-height: $font * 0.8; 
+          font-size: $font * 0.38;
+          line-height: $font * 0.5; 
 
         }
       }
     }
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 360px) {
 
-.form-section {
-
-  
+.form-section { 
     .wrap {
  
-
       .text-wrap {
 
- 
-
-        h2 {
-          font-size: $font * 0.5;        
-          line-height: $font * 0.7; 
-
-        }
       }
     }
   }

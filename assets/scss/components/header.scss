@@ -315,15 +315,14 @@
 
 @media only screen and (max-width: 1440px) {
   .header {
-    padding-bottom: 50%;
+    /*padding-bottom: 50%;*/
 
     .wrap {
-
+     /* position: absolute;
+      height: 100%;*/
 
       .header-box {
         height: 300px;
-
-
       }
     }
 
