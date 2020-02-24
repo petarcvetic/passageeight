@@ -98,7 +98,7 @@
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1280px) {
   .services-template {
 
     .border-red {
@@ -123,40 +123,57 @@
   }
 }
 
+@media only screen and (max-width: 960px) {
+  .services-template {
+    .header {
+      padding-bottom: 100%;
+
+      .w-100 {
+        height: 0px;
+      }
+      .wrap{
+        margin-top: 0;
+        h1 {
+          font-size: $font;
+
+        }
+      }
+    }
+  }
+}
+
+
 @media only screen and (max-width: 900px) {
+  .services-template {
+    .sekcija1 {
+      padding: 80px 30px;
 
-  .sekcija1 {
-    padding: 100px 30px;
+      .w-50 {
+        display: flex;
+        width: 100%;
+      }
 
-    .w-50 {
-      display: flex;
-      width: 100%;
+      .services-img {
+        max-width: 500px;
+        margin: 0 auto 40px auto;
+      }
+
+      .text-wrap {
+        max-width: unset;
+
+
+      }
+
     }
-
-    .services-img {
-      max-width: 500px;
-      margin: 0 auto 40px auto;
-    }
-
-    .text-wrap {
-      max-width: unset;
-
-
-    }
-
   }
 }
 
 @media only screen and (max-width: 720px) {
   .services-template {
     .header {
-      height: 500px;
-
-
       .w-100 {
         height: 0px;
       }
-
       h1 {
         font-size: $font;
 
@@ -166,8 +183,13 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .services-template {
+    .header {
+      padding-bottom: 100vh;
+    }
+  }
   .description-section {
-
+    
     h3 {
       font-size: $font * 0.30;
       margin: 40px 0;

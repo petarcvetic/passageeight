@@ -313,13 +313,19 @@
 
         .head {
 
-
+          h3{
+            font-size: $font * 0.32;
+          }
 
           span {
             font-size: $font * 0.30;
             line-height: $font * 0.48;
 
           }
+        }
+
+        .body{
+          padding-top: 0;
         }
 
 
