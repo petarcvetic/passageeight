@@ -75,10 +75,10 @@
   </div>
 </template>
 <script>
-import MainNav from '../../components/MainNav.vue';
-import ServiceSlider from '../../components/services/ServiceSlider.vue';
-import ServiceQuote from '../../components/services/ServiceQuote.vue';
-import ServicesMob from '../../components/mob_components/ServicesMob.vue';
+import MainNav from '@/components/MainNav.vue';
+import ServiceSlider from '@/components/services/ServiceSlider.vue';
+import ServiceQuote from '@/components/services/ServiceQuote.vue';
+import ServicesMob from '@/components/mob_components/ServicesMob.vue';
 import { mapState } from 'vuex';
 export default {
   components: {
@@ -87,7 +87,12 @@ export default {
     ServiceQuote,
     ServicesMob,
   },
-
+  head() {
+    return {
+      title: 'IT Maintenance Services  | Passage 8'
+     
+    }
+  },
   data() {
     return {
 

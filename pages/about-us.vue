@@ -1,27 +1,32 @@
 <template>
-  <div class="header">
-   <main-nav />
-    
+  <div>
+    about
   </div>
 </template>
 <script>
-import MainNav from '../../components/MainNav.vue';  
 import { mapState } from 'vuex';
 export default {
   components: {
-    MainNav
+
   },
-  
+  head() {
+    return {
+      title: 'About Us | Passage 8'
+
+    }
+  },
   data() {
     return {
-     
+
     }
   },
   computed: {
-  
+    ...mapState({
+      winWidth: 'winWidth'
+    })
   },
-  mounted() {   
-   
+  mounted() {
+
   }
 
 };
