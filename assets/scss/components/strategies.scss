@@ -189,7 +189,8 @@
 @media only screen and (max-width: 480px) {
   .strategies {
     padding: 50px 0;
-    column-gap: 9%;
+    column-gap: unset;
+    height: auto;
 
     .text-wrap {
       grid-column: span 7;
