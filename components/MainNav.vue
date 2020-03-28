@@ -1,5 +1,5 @@
 <template>
-  <div class="main-nav" >
+  <div class="main-nav">
     <div v-if="winWidth > 720" class="nav">
       <ul>
         <li>
@@ -89,10 +89,11 @@ export default {
     })
   },
   mounted() {
-   window.addEventListener('resize', ()=>{ 
     this.$store.commit('SET_WIDTH', window.innerWidth);
+    window.addEventListener('resize', () => {
+      this.$store.commit('SET_WIDTH', window.innerWidth);
 
-  });
+    });
   }
 
 };
