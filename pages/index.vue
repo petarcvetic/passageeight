@@ -50,17 +50,17 @@
   </div>
 </template>
 <script>
-import OurServices from '../components/OurServices.vue';
-import ServicesMob from '../components/mob_components/ServicesMob.vue';
-import ScrollVue from '../components/ScrollVue.vue';
-import HowMob from '../components/mob_components/HowMob.vue';
-import VideoVue from '../components/VideoVue.vue';
-import WhyVue from '../components/WhyVue.vue';
-import ShadowVue from '../components/Shadow.vue';
-import ShadowMob from '../components/mob_components/ShadowMob.vue';
-import ContactForm from '../components/ContactForm.vue';
-import SvgVue from '../components/Svg.vue';
-import PsHeader from '../components/PsHeader.vue';
+import OurServices from '@/components/OurServices.vue';
+import ServicesMob from '@/components/mob_components/ServicesMob.vue';
+import ScrollVue from '@/components/ScrollVue.vue';
+import HowMob from '@/components/mob_components/HowMob.vue';
+import VideoVue from '@/components/VideoVue.vue';
+import WhyVue from '@/components/WhyVue.vue';
+import ShadowVue from '@/components/Shadow.vue';
+import ShadowMob from '@/components/mob_components/ShadowMob.vue';
+import ContactForm from '@/components/ContactForm.vue';
+import SvgVue from '@/components/Svg.vue';
+import PsHeader from '@/components/PsHeader.vue';
 import { mapState } from 'vuex';
 
 export default {
@@ -85,12 +85,8 @@ export default {
   },
   head() {
     return {
-      title: 'Welcome',
-      meta: [{
-        hid: 'description',
-        name: 'description',
-        content: 'Welcome'
-      }],
+      title: 'Digital Marketing Agency | Best Online Marketing Services | Passage 8',
+   
     }
   },
 

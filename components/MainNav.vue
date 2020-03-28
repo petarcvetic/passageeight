@@ -6,40 +6,37 @@
           <nuxt-link to='/'>HOME</nuxt-link>
         </li>
         <li>
-          <nuxt-link to='/about'>ABOUT</nuxt-link>
+          <nuxt-link to='/about-us'>ABOUT</nuxt-link>
         </li>
         <li class="sub-menu-wrap">
           <nuxt-link to='/services'>SERVICES</nuxt-link><i class="fas fa-chevron-down"></i>
           <ul class="sub-menu">
             <li>
-              <nuxt-link to='/services/seo'>SEO</nuxt-link>
+              <nuxt-link to='/seo-services'>SEO</nuxt-link>
             </li>
             <li>
-              <nuxt-link to='/services/se'>DEVELOPMENT</nuxt-link>
+              <nuxt-link to='/web-development-services'>DEVELOPMENT</nuxt-link>
             </li>
             <li>
-              <nuxt-link to='/services/se'>MAINTENANCE</nuxt-link>
+              <nuxt-link to='/it-maintenance-services'>MAINTENANCE</nuxt-link>
             </li>
             <li>
-              <nuxt-link to='/services/se'>CONTENT</nuxt-link>
+              <nuxt-link to='/content-marketing-services'>CONTENT</nuxt-link>
             </li>
             <li>
-              <nuxt-link to='/services/se'>SOCIAL MEDIA</nuxt-link>
+              <nuxt-link to='/social-media-marketing-services'>SOCIAL MEDIA</nuxt-link>
             </li>
             <li>
-              <nuxt-link to='/services/se'>PPC</nuxt-link>
+              <nuxt-link to='/ppc-management-services'>PPC</nuxt-link>
             </li>
             <li>
-              <nuxt-link to='/services/se'>DESIGN</nuxt-link>
+              <nuxt-link to='/graphic-design-services'>DESIGN</nuxt-link>
             </li>
             <li>
-              <nuxt-link to='/services/so'>WHITE LABEL</nuxt-link>
+              <nuxt-link to='/white-label-services'>WHITE LABEL</nuxt-link>
             </li>
           </ul>
-        </li>
-        <li>
-          <nuxt-link to='/projects'>PROJECTS</nuxt-link>
-        </li>
+        </li>       
         <li>
           <nuxt-link to='/contact'>CONTACT</nuxt-link>
         </li>
